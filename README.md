@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌿 Nutrición – Landing Page
 
-## Getting Started
+Este repositorio contiene el código de la **Landing Page de Nutrición** — un sitio web diseñado para presentar los servicios profesionales de **María Gracia Yturralde**, licenciada en Nutrición y Dietética.
 
-First, run the development server:
+## 👩‍⚕️ Sobre María Gracia Yturralde
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**Nutrición real para mujeres reales**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+María Gracia es Licenciada en Nutrición y Dietética, y ha dedicado su carrera a acompañar a mujeres en distintas etapas de su vida: desde el equilibrio hormonal y el ciclo menstrual, hasta una alimentación consciente y sostenible.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Su enfoque es **personalizado, sin restricciones extremas**, basado en ciencia, escucha activa y educación. Cree profundamente en el poder transformador de la nutrición, no solo en el aspecto físico, sino también en el emocional.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Está comprometida en ayudarte a reconectar con tu bienestar, sentirte en paz con tu cuerpo y tomar decisiones que te hagan sentir **fuerte, informada y feliz**.
 
-## Learn More
+En el sitio podrás explorar sus servicios y encontrar la solución ideal para ti:
 
-To learn more about Next.js, take a look at the following resources:
+- **Asesoría nutricional**  
+- **Programa de bienestar general**  
+- **Plan de nutrición hormonal**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Tecnologías utilizadas
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **React** – Biblioteca de JavaScript para construir interfaces de usuario dinámicas.  
+- **SCSS** – Preprocesador de CSS para una estructura de estilos más organizada y legible.  
+- **JavaScript** – Lenguaje principal para manejar la lógica del frontend.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+✨ *Todo en un solo lugar. Claro. Cercano. Profesional.*
