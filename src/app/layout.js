@@ -1,4 +1,5 @@
 import '@/css/styles.css';
+import { Provider } from "@/components/ui/provider"
 
 export default function RootLayout({ children, params }) {
   const lang = params?.lang || 'es'; 
@@ -22,7 +23,7 @@ export default function RootLayout({ children, params }) {
         />
       </head>
       <body>
-        {children}
+        <Provider>{children}</Provider>
       </body>
     </html>
   );

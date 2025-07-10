@@ -29,6 +29,11 @@ a:focus {
   min-height: 100vh;
 }
 
+.navbar {
+  background-color: black;
+  height: 70px;
+}
+
 body {
   background-color: #F8F8F8;
 }/*# sourceMappingURL=styles.css.map */

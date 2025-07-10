@@ -1,3 +1,9 @@
 {
-    
+    "navbar": {
+        "button": "Nutricionista",
+        "start": "Inicio",
+        "about": "Sobre mí",
+        "services": "Servicios",
+        "contact": "Contacto"
+    }
 }
