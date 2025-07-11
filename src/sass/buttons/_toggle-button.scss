@@ -1,0 +1,13 @@
+.toggle-button {
+    @include flex($direction: row, $gap: 5px);
+    @include title-font($size: 12px, $weight: 500, $color: $gray-light);
+
+    .chakra-switch__control {
+        background-color: $purple-primary;
+        box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.3);
+
+        .chakra-switch__thumb {
+            background-color: #fff;
+        }
+    }
+}

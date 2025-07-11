@@ -1,4 +1,4 @@
-@mixin title-font($size: 22px, $weight: 700, $color: $gray) {
+@mixin title-font($size: 22px, $weight: 700, $color: $gray-dark) {
   font-family: $font-raleway;
   font-size: $size;
   font-weight: $weight;
@@ -6,7 +6,7 @@
   line-height: calc($size + 10px);
 }
 
-@mixin body-font($size: 18px, $weight: 400, $color: $gray) {
+@mixin body-font($size: 18px, $weight: 400, $color: $gray-dark) {
   font-family: $font-poppins;
   font-size: $size;
   font-weight: $weight;

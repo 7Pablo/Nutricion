@@ -5,5 +5,14 @@
         "about": "Sobre mí",
         "services": "Servicios",
         "contact": "Contacto"
+    },
+
+    "start": {
+        "title": "Nutrición real para mujeres reales",
+        "subtitle": "Acompañamiento nutricional especializado en cada etapa de tu bienestar femenino."
+    },
+
+    "buttons": {
+        "begin": "Comencémos"
     }
 }

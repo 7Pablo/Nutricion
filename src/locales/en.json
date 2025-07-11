@@ -5,5 +5,14 @@
         "about": "About Me",
         "services": "Services",
         "contact": "Contact"
+    },
+    
+    "start": {
+        "title": "Real nutrition for real women",
+        "subtitle": "Specialized nutritional support for every stage of your feminine well-being."
+    },
+
+    "buttons": {
+        "begin": "Let's get started"
     }
 }

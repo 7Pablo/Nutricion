@@ -1,29 +1,33 @@
+// ToggleButton.js (Client component)
 'use client';
 
-import { getTranslations } from "@/locales/translations";
 import { usePathname, useRouter } from "next/navigation";
 import { Switch } from "@chakra-ui/react"
+import { useState } from "react";
 
-export default async function ToggleButton({lang}) {
+export default function ToggleButton({lang}) {
     const pathname = usePathname();
     const router = useRouter();
 
-    const isEnglish = lang === "en";
-    const newLang = isEnglish ? "es" : "en";
-    const newHref = pathname.replace(`/${lang}`, `/${newLang}`);
+    // State
+    const [isSwitchChecked, setIsSwitchChecked] = useState(lang === "en");
 
-    const handleToggle = () => {
-        router.push(newHref);
+    const handleToggle = (event) => {
+        const willBeEnglish = event.checked;
+        setIsSwitchChecked(willBeEnglish);
+        setTimeout(() => {
+            const newLang = willBeEnglish ? "en" : "es";
+            const newHref = pathname.replace(`/${lang}`, `/${newLang}`);
+            router.push(newHref);
+        }, 200);
     };
 
     return (
         <div className="toggle-button">
             <p>ES</p>
             <Switch.Root
-                isChecked={isEnglish}
+                checked={isSwitchChecked}
                 onCheckedChange={handleToggle}
-                colorScheme="purple"
-                size="md"
             >
                 <Switch.HiddenInput />
                 <Switch.Control />

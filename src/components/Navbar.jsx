@@ -1,4 +1,4 @@
-// Navbar.js (Client component)
+// Navbar.js (Server component)
 
 import Image from "next/image";
 import ToggleButton from "./buttons/ToggleButton";
@@ -12,27 +12,31 @@ export default async function Navbar({lang}) {
 
     return (
         <div className="navbar">
-            <div className="navbar__button">
-                <Image
-                    src="/logos/nutricion_logo.webp"
-                    alt="Maria Gracia Yturralde - Nutricionista Logo"
-                    priority
-                    width={200}
-                    height={200}   
-                    style={{ objectFit: "contain" }}
-                />
-                <div className="navbar__button--text">
-                    <h1>María Gracia Yturralde</h1>
-                    <h2>{trans.navbar.button}</h2>
+            <div className="navbar__content">
+                <div className="navbar__button">
+                    <div className="navbar__logo">
+                        <Image
+                            src="/logos/nutricion_logo.webp"
+                            alt="Maria Gracia Yturralde - Nutricionista Logo"
+                            priority
+                            width={200}
+                            height={200}
+                            style={{ objectFit: "contain" }}
+                        />
+                    </div>
+                    <div className="navbar__button--text">
+                        <h2>María Gracia Yturralde</h2>
+                        <h3>{trans.navbar.button}</h3>
+                    </div>
                 </div>
+                <div className="navbar__items">
+                    <a href="#start">{trans.navbar.start}</a>
+                    <a href="#about">{trans.navbar.about}</a>
+                    <a href="#services">{trans.navbar.services}</a>
+                    <a href="#contact">{trans.navbar.contact}</a>
+                </div>
+                <ToggleButton lang={lang}/>
             </div>
-            <div className="navbar__items">
-                <a href="#start">{trans.navbar.start}</a>
-                <a href="#about">{trans.navbar.about}</a>
-                <a href="#services">{trans.navbar.services}</a>
-                <a href="#contact">{trans.navbar.contact}</a>
-            </div>
-            <ToggleButton lang={lang}/>
         </div>
     );
 }
