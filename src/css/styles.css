@@ -29,6 +29,159 @@ a:focus {
   min-height: 100vh;
 }
 
+@keyframes slideFadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideFadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes bounceDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  80% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes bounceRight {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-10px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.start {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+}
+.start__content {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 50px;
+  z-index: 0;
+}
+.start__left {
+  align-self: start;
+}
+.start__left--text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: start;
+  justify-content: center;
+  margin: 120px 0 30px;
+}
+.start__left h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+  color: #A267E7;
+  line-height: 90px;
+  line-height: 70px;
+  letter-spacing: -0.5px;
+  max-width: 525px;
+}
+.start__left h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #000;
+  line-height: 30px;
+  max-width: 450px;
+  line-height: 22px;
+}
+.start__right {
+  position: relative;
+  width: fit-content;
+}
+.start__right img {
+  width: 750px;
+  height: auto;
+}
+.start__right--overlay {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 20%;
+  z-index: 2;
+  pointer-events: none;
+  left: -1px;
+  background: linear-gradient(to right, #F8F8F8 0%, transparent 100%);
+}
+.start__background--balls-1, .start__background--balls-2 {
+  position: absolute;
+  z-index: -1;
+}
+.start__background--balls-1 img, .start__background--balls-2 img {
+  width: 600px;
+}
+.start__background--balls-1 {
+  top: 0;
+  right: -125px;
+  transform: rotate(-10deg);
+}
+.start__background--balls-2 {
+  bottom: -300px;
+  left: -100px;
+  transform: rotate(-110deg);
+}
+.start__scroller {
+  background-color: #6D64AF;
+  width: 100%;
+  height: 80px;
+  z-index: 2;
+}
+
+@media (max-width: 1200px) {
+  .start__content {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 550px) {
+  .start__content {
+    padding: 0 30px;
+  }
+}
 .navbar {
   display: flex;
   flex-direction: column;
@@ -54,10 +207,12 @@ a:focus {
   gap: 0px;
   align-items: center;
   justify-content: center;
+  animation: slideFadeInLeft 0.6s ease-out forwards;
 }
 .navbar__logo img {
   height: 50px;
   width: 50px;
+  transition: transform 0.2s ease-out;
 }
 .navbar__button {
   display: flex;
@@ -66,6 +221,7 @@ a:focus {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: transform 0.2s ease-out;
 }
 .navbar__button--text {
   display: flex;
@@ -73,6 +229,7 @@ a:focus {
   gap: 0px;
   align-items: start;
   justify-content: center;
+  animation: slideFadeInLeft 0.6s ease-out forwards;
 }
 .navbar__button--text h2 {
   font-family: "Raleway", sans-serif;
@@ -90,6 +247,12 @@ a:focus {
   line-height: 26px;
   line-height: 16px;
 }
+.navbar__button:hover {
+  transform: scale(1.03);
+}
+.navbar__button:hover .navbar__logo img {
+  transform: rotate(20deg);
+}
 .navbar__items {
   display: flex;
   flex-direction: row;
@@ -106,18 +269,107 @@ a:focus {
   line-height: 24px;
   text-decoration: none;
   cursor: pointer;
+  animation: bounceDown 0.6s ease-out forwards;
+}
+.navbar__items a:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.navbar__items a:nth-child(2) {
+  animation-delay: 0.25s;
+}
+.navbar__items a:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.navbar__items a:nth-child(4) {
+  animation-delay: 0.55s;
+}
+.navbar__items a .nav-inner {
+  display: inline-block;
   transition: transform 0.2s ease-out, color 0.2s ease-out;
 }
-.navbar__items a:hover {
+.navbar__items a:hover .nav-inner {
   transform: translateY(-2px);
-  color: #6D64AF;
+  color: #A267E7;
+  font-weight: 600;
 }
 
 @media (max-width: 800px) {
+  .navbar__content {
+    height: 50px;
+  }
+  .navbar__logo img {
+    height: 45px;
+    width: 45px;
+  }
+  .navbar__button {
+    gap: 8px;
+  }
+  .navbar__button--text h2, .navbar__button--text h3 {
+    font-size: 14px;
+    line-height: 14px;
+  }
   .navbar__items {
     display: none;
   }
+  .navbar__items a {
+    animation: none;
+  }
+  .navbar .toggle-button {
+    display: none;
+  }
 }
+.button--primary, .button--secondary {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 28px;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  background-color: #6E61D4;
+  min-width: 150px;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 100px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.button--primary::after, .button--secondary::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 140px;
+  height: 0;
+  background-color: #A267E7;
+  z-index: 1;
+  transition: height 0.5s ease;
+}
+.button--primary:hover::after, .button--secondary:hover::after {
+  height: 350px;
+  transition: height 1s ease;
+}
+.button--primary:hover, .button--secondary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(109, 100, 175, 0.5);
+}
+.button--secondary {
+  background-color: #A267E7;
+}
+.button__text {
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 550px) {
+  .button--primary, .button--secondary {
+    font-size: 16px;
+    padding: 8px 20px;
+  }
+}
+
 .toggle-button {
   display: flex;
   flex-direction: row;
@@ -129,6 +381,7 @@ a:focus {
   font-weight: 500;
   color: #898989;
   line-height: 22px;
+  animation: slideFadeInRight 0.6s ease-out forwards;
 }
 .toggle-button .chakra-switch__control {
   background-color: #6D64AF;
@@ -136,8 +389,87 @@ a:focus {
 }
 .toggle-button .chakra-switch__control .chakra-switch__thumb {
   background-color: #fff;
+  transition: transform 0.2s ease-out;
+}
+.toggle-button .chakra-switch__control:hover .chakra-switch__thumb {
+  transform: scale(0.8);
 }
 
+@media (max-width: 800px) {
+  .toggle-button {
+    font-size: 16px;
+    animation: none;
+  }
+}
+.ham-dropdown {
+  display: none;
+}
+.ham-dropdown__button {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+.ham-dropdown__button.is-open {
+  transform: rotate(180deg);
+}
+.ham-dropdown__button:focus {
+  outline: none;
+}
+.ham-dropdown__content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: start;
+  justify-content: center;
+  background-color: #fff;
+  margin-top: 25px;
+  border-radius: 12px;
+  padding: 20px 50px 25px 25px;
+  width: 225px;
+}
+.ham-dropdown__item {
+  transition: transform 0.3s ease-out;
+  outline: none;
+}
+.ham-dropdown__item:focus {
+  outline: none;
+}
+.ham-dropdown__item .chakra-menu__item {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #898989;
+  line-height: 28px;
+  padding: 8px 0px;
+  background-color: transparent;
+}
+.ham-dropdown__item .chakra-menu__item:focus {
+  outline: none;
+}
+.ham-dropdown__item:hover {
+  transform: translateX(6px);
+}
+
+@media (max-width: 800px) {
+  .ham-dropdown {
+    display: block;
+  }
+  .ham-dropdown .chakra-menu__item {
+    padding: 8px 0px;
+  }
+  .ham-dropdown .toggle-button {
+    display: flex;
+  }
+}
+@media (max-width: 550px) {
+  .ham-dropdown__content {
+    width: 90vw;
+  }
+  .ham-dropdown__item .chakra-menu__item {
+    font-size: 20px;
+    padding: 10px 0px;
+  }
+}
 body {
   background-color: #F8F8F8;
 }/*# sourceMappingURL=styles.css.map */

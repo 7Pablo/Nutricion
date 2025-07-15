@@ -29,19 +29,24 @@ a:focus {
     min-height: 100vh;
 }
 
-// Fonts
-
 // Utilities
 @import './utils/variables';
 @import './utils/mixins';
+@import './utils/animations';
+
+// Page
+@import './page/landing-page';
+
+// Sections
+@import './sections/start-section';
 
 // Components
 @import './components/navbar';
 
 // Buttons
+@import './buttons/button';
 @import './buttons/toggle-button';
-
-// Cards
+@import './buttons/ham-dropdown';
 
 body {
 	background-color: $background; 

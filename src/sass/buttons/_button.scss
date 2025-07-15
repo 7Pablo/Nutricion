@@ -1,0 +1,57 @@
+.button {
+    &--primary, &--secondary {
+        @include body-font($size: 18px, $weight: 500, $color: #fff);
+        line-height: 20px;
+        letter-spacing: 0.4px;
+
+        background-color: $purple-secondary;
+        min-width: 150px;
+        padding: 10px 24px; 
+        border: none;
+        border-radius: 100px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+
+        transition: transform 0.2s ease, color 0.2s ease;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            width: 140px;
+            height: 0;
+            background-color: $violet;
+            z-index: 1;
+            transition: height 0.5s ease;
+        }
+
+        &:hover::after {
+            height: 350px;
+            transition: height 1s ease;
+        }
+
+        &:hover {
+            transform: translateY(-4px); 
+            box-shadow: 0 4px 10px rgba($purple-primary, 0.5);
+        }
+    }
+
+    &--secondary {
+        background-color: $violet;
+    }
+
+    &__text {
+        position: relative;
+        z-index: 2;
+    }
+
+    @include responsive(small) {
+        &--primary, &--secondary {
+            font-size: 16px;
+            padding: 8px 20px;
+        }
+    }
+}

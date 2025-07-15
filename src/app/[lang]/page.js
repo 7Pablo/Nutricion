@@ -1,7 +1,8 @@
 // page.js (LandingPage/Server component)
 
-import Image from "next/image";
 import { getTranslations } from "@/locales/translations";
+import Image from "next/image";
+import Button from "@/components/buttons/Button";
 
 // LandingPage
 export default async function LandingPage({params}) {
@@ -12,12 +13,18 @@ export default async function LandingPage({params}) {
 
     return (
         <div className="landing-page">
+
           {/* Start */}
           <section id="start" className="start">
             <div className="start__content">
               <div className="start__left">
-                <h1>{trans.start.title}</h1>
-                <h2>{trans.start.subtitle}</h2>
+                <div className="start__left--text">
+                  <h1>{trans.start.title}</h1>
+                  <h2>{trans.start.subtitle}</h2>
+                </div>
+                <Button type="primary">
+                  {trans.buttons.begin}
+                </Button>
               </div>
               <div className="start__right">
                 <Image 
@@ -26,10 +33,29 @@ export default async function LandingPage({params}) {
                   height={500}
                   width={500}
                 />
+                <div className="start__right--overlay"/>
+              </div>
+              <div className="start__background">
+                <div className="start__background--balls-1">
+                  <Image
+                    src="/images/purple-balls.png"
+                    alt="Fondo de formas moradas"
+                    height={600}
+                    width={600}
+                  />
+                </div>
+                <div className="start__background--balls-2">
+                  <Image
+                    src="/images/purple-balls.png"
+                    alt="Fondo de formas moradas"
+                    height={600}
+                    width={600}
+                  />
+                </div>
               </div>
             </div>
-            <div className="start__scroll">
-          
+            <div className="start__scroller">
+
             </div>
           </section>
 

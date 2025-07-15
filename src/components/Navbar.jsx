@@ -1,8 +1,9 @@
 // Navbar.js (Server component)
 
-import Image from "next/image";
 import ToggleButton from "./buttons/ToggleButton";
 import { getTranslations } from "@/locales/translations";
+import HamDropdown from "./buttons/HamDropdown";
+import NavbarButton from "./buttons/NavbarButton";
 
 export default async function Navbar({lang}) {
 
@@ -13,29 +14,18 @@ export default async function Navbar({lang}) {
     return (
         <div className="navbar">
             <div className="navbar__content">
-                <div className="navbar__button">
-                    <div className="navbar__logo">
-                        <Image
-                            src="/logos/nutricion_logo.webp"
-                            alt="Maria Gracia Yturralde - Nutricionista Logo"
-                            priority
-                            width={200}
-                            height={200}
-                            style={{ objectFit: "contain" }}
-                        />
-                    </div>
-                    <div className="navbar__button--text">
-                        <h2>María Gracia Yturralde</h2>
-                        <h3>{trans.navbar.button}</h3>
-                    </div>
-                </div>
+                <NavbarButton trans={trans} />
                 <div className="navbar__items">
-                    <a href="#start">{trans.navbar.start}</a>
-                    <a href="#about">{trans.navbar.about}</a>
-                    <a href="#services">{trans.navbar.services}</a>
-                    <a href="#contact">{trans.navbar.contact}</a>
+                    <a href="#start"><span className="nav-inner">Start</span></a>
+                    <a href="#about"><span className="nav-inner">About</span></a>
+                    <a href="#services"><span className="nav-inner">Services</span></a>
+                    <a href="#contact"><span className="nav-inner">Contact</span></a>
                 </div>
-                <ToggleButton lang={lang}/>
+                <ToggleButton lang={lang} />
+                <HamDropdown 
+                    trans={trans}
+                    lang={lang}
+                />
             </div>
         </div>
     );

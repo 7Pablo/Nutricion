@@ -1,10 +1,16 @@
 // Button.jsx (Client component)
 'use client';
 
-export default function Button(props) {
+export default function Button({
+    type = "primary",
+    children,
+}) {
+    
     return (
-        <div className="button">
-            
-        </div>
+        <button 
+            className={`button--${type}`}
+        >
+            <span className="button__text">{children}</span>
+        </button>
     );
 }

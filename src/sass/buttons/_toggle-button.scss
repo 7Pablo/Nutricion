@@ -1,13 +1,36 @@
 .toggle-button {
     @include flex($direction: row, $gap: 5px);
     @include title-font($size: 12px, $weight: 500, $color: $gray-light);
-
+    animation: slideFadeInRight 0.6s ease-out forwards;
+    
     .chakra-switch__control {
         background-color: $purple-primary;
         box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.3);
 
         .chakra-switch__thumb {
             background-color: #fff;
+            transition: transform 0.2s ease-out;
         }
+
+        &:hover {
+            .chakra-switch__thumb {
+                transform: scale(0.8);
+            }
+        }
+    }
+}
+
+// Responsive smedium 
+@include responsive(smedium) {
+    .toggle-button { 
+        font-size: 16px;
+        animation: none;
+    }
+}
+
+// Responsive smell 
+@include responsive(smell) {
+    .toggle-button {
+        font-size: 18px;
     }
 }

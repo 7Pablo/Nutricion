@@ -12,19 +12,23 @@
 
     &__logo {
         @include flex();
+        animation: slideFadeInLeft 0.6s ease-out forwards;
 
         img {
             height: 50px;
             width: 50px;
+            transition: transform 0.2s ease-out;
         }
     }
 
     &__button {
         @include flex($direction: row, $gap: 10px);
         cursor: pointer;
+        transition: transform 0.2s ease-out;
 
         &--text {
             @include flex($gap: 0px, $align: start);
+            animation: slideFadeInLeft 0.6s ease-out forwards;
 
             h2 {
                 @include title-font($size: 16px, $weight: 400, $color: $gray);
@@ -36,7 +40,14 @@
                 line-height: 16px;
             }
         }
-        
+
+        &:hover {
+            transform: scale(1.03);
+
+            .navbar__logo img {
+                transform: rotate(20deg);
+            }
+        }
     }
 
     &__items {
@@ -47,11 +58,22 @@
             @include title-font($size: 14px, $weight: 500);
             text-decoration: none;
             cursor: pointer;
-            transition: transform 0.2s ease-out, color 0.2s ease-out;
+            animation: bounceDown 0.6s ease-out forwards;
+        
+            &:nth-child(1) { animation-delay: 0.1s; }
+            &:nth-child(2) { animation-delay: 0.25s; }
+            &:nth-child(3) { animation-delay: 0.4s; }
+            &:nth-child(4) { animation-delay: 0.55s; }
 
-            &:hover {
+            .nav-inner {
+                display: inline-block;
+                transition: transform 0.2s ease-out, color 0.2s ease-out;
+            }
+
+             &:hover .nav-inner {
                 transform: translateY(-2px);
-                color: $purple-primary;
+                color: $violet;
+                font-weight: 600;
             }
         }  
     }
@@ -60,7 +82,37 @@
 // Responsive smedium
 @include responsive(smedium) {
     .navbar {
+        &__content {
+            height: 50px;
+        }
+
+        &__logo {
+            img {
+                height: 45px;
+                width: 45px;
+            }
+        }
+
+        &__button {
+            gap: 8px;
+
+            &--text {
+                h2, h3 {
+                    font-size: 14px;
+                    line-height: 14px;
+                }
+            }
+        }
+
         &__items {
+            display: none;
+            
+            a {
+                animation: none;
+            }
+        }
+
+        .toggle-button {
             display: none;
         }
     }
