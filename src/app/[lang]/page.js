@@ -52,6 +52,122 @@ export default async function LandingPage({params}) {
                     width={600}
                   />
                 </div>
+
+                {/* Right */}
+                <div className="start__background--fruit-1">
+                  <Image
+                    src="/images/leaf-one2.png"
+                    alt="Hoja verde"
+                    height={50}
+                    width={50}
+                  />
+                </div>
+                <div className="start__background--fruit-2">
+                  <Image
+                    src="/images/leaf-one1.png"
+                    alt="Hoja verde"
+                    height={45}
+                    width={45}
+                  />
+                </div>
+                <div className="start__background--fruit-3">
+                  <Image
+                    src="/images/leaf-one2.png"
+                    alt="Hoja verde"
+                    height={35}
+                    width={35}
+                  />
+                </div>
+                <div className="start__background--fruit-4">
+                  <Image
+                    src="/images/blue1.png"
+                    alt="Mora azul"
+                    height={80}
+                    width={80}
+                  />
+                </div>
+                <div className="start__background--fruit-5">
+                  <Image
+                    src="/images/leaf-three1.png"
+                    alt="Hoja verde"
+                    height={90}
+                    width={90}
+                  />
+                </div>
+                <div className="start__background--fruit-6">
+                  <Image
+                    src="/images/blue2.png"
+                    alt="Mora azul"
+                    height={80}
+                    width={80}
+                  />
+                </div>
+                <div className="start__background--fruit-7">
+                  <Image
+                    src="/images/red.png"
+                    alt="Frambuesa"
+                    height={60}
+                    width={60}
+                  />
+                </div>
+
+                {/* Left */}
+                <div className="start__background--fruit-8">
+                  <Image
+                    src="/images/leaf-three2.png"
+                    alt="Hoja verde"
+                    height={90}
+                    width={90}
+                  />
+                </div>
+                <div className="start__background--fruit-9">
+                  <Image
+                    src="/images/leaf-one1.png"
+                    alt="Hoja verde"
+                    height={45}
+                    width={45}
+                  />
+                </div>
+                <div className="start__background--fruit-10">
+                  <Image
+                    src="/images/red.png"
+                    alt="Frambuesa"
+                    height={80}
+                    width={80}
+                  />
+                </div>
+                <div className="start__background--fruit-11">
+                  <Image
+                    src="/images/blue1.png"
+                    alt="Mora azul"
+                    height={40}
+                    width={40}
+                  />
+                </div>
+                <div className="start__background--fruit-12">
+                  <Image
+                    src="/images/leaf-three2.png"
+                    alt="Hoja verde"
+                    height={75}
+                    width={75}
+                  />
+                </div>
+                <div className="start__background--fruit-13">
+                  <Image
+                    src="/images/blue3.png"
+                    alt="Mora azul"
+                    height={80}
+                    width={80}
+                  />
+                </div>
+                <div className="start__background--fruit-14">
+                  <Image
+                    src="/images/leaf-two.png"
+                    alt="Hoja verde"
+                    height={75}
+                    width={75}
+                  />
+                </div>
               </div>
             </div>
             <div className="start__scroller">

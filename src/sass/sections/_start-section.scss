@@ -57,7 +57,8 @@
         &--balls {
             &-1, &-2 {
                 position: absolute;
-                z-index: -1;
+                pointer-events: none;
+                z-index: -5;
 
                 img {
                     width: 600px;
@@ -66,14 +67,120 @@
 
             &-1 {
                 top: 0;
-                right: -125px;
+                right: -150px;
                 transform: rotate(-10deg);
             }
 
             &-2 {
-                bottom: -300px;
-                left: -100px;
-                transform: rotate(-110deg);
+                bottom: -425px;
+                left: -80px;
+                transform: rotate(-100deg);
+            }
+        }
+
+        &--fruit {
+            &-1, &-2, &-3, &-4, &-5, &-6, &-7, &-8, 
+            &-9, &-10, &-11, &-12, &-13, &-14 {
+                position: absolute;
+                pointer-events: none;
+            }
+
+            &-1 {
+                top: 150px;
+                right: 200px;
+                transform: rotate(90deg);
+                z-index: -1;
+            }
+
+            &-2 {
+                top: 180px;
+                right: 165px;
+                transform: rotate(200deg);
+                z-index: -2;
+                filter: blur(1px);
+                opacity: 0.4;
+            }
+
+            &-3 {
+                top: 225px;
+                right: 100px;
+                transform: rotate(200deg);
+                filter: blur(1px);
+                opacity: 0.75; 
+            }
+
+            &-4 {
+                top: 260px;
+                right: 110px;
+            }
+
+            &-5 {
+                top: 300px;
+                right: 75px;
+                transform: rotate(200deg);
+                z-index: -2;
+            }
+
+            &-6 {
+                bottom: 185px;
+                right: 135px;
+            }
+
+            &-7 {
+                bottom: 235px;
+                right: 185px;
+                filter: blur(2px);
+                z-index: -2;
+            }
+
+            &-8 {
+                bottom: 175px;
+                left: 50px;
+                transform: rotate(200deg);
+            }
+
+            &-9 {
+                bottom: 145px;
+                left: 120px;
+                transform: rotate(200deg);
+                z-index: -2;
+                filter: blur(1px);
+                opacity: 0.4;
+            }
+
+            &-10 {
+                bottom: 40px;
+                left: 100px;
+                transform: rotate(-75deg);
+            }
+
+            &-11 {
+                bottom: 20px;
+                left: 150px;
+                filter: blur(1px);
+                opacity: 0.8;
+                z-index: -2;
+            }
+
+            &-12 {
+                bottom: 20px;
+                left: 280px;
+                filter: blur(1.2px);
+                transform: rotate(175deg) scaleX(-1);
+                opacity: 0.8;
+                z-index: -2;
+            }
+
+            &-13 {
+                bottom: 20px;
+                left: 425px;
+            }
+
+            &-14 {
+                bottom: 60px;
+                left: 400px;
+                transform: rotate(-155deg);
+                z-index: -2;
             }
         }
     }
