@@ -12,6 +12,7 @@
 
     &__left {
         align-self: start;
+        animation: slideFadeInLeft 0.6s ease-out forwards;
 
         &--text {
             @include flex($align: start, $gap: 20px);
@@ -35,6 +36,7 @@
     &__right {
         position: relative;
         width: fit-content;
+        animation: slideFadeInRight 0.6s ease-out forwards;
 
         img {
             width: 750px;
@@ -79,10 +81,12 @@
         }
 
         &--fruit {
-            &-1, &-2, &-3, &-4, &-5, &-6, &-7, &-8, 
-            &-9, &-10, &-11, &-12, &-13, &-14 {
+            &-1, &-2, &-3, &-4, &-5, &-6, &-7, &-8, &-9, &-10, &-11, &-12, &-13, &-14 {
                 position: absolute;
                 pointer-events: none;
+                opacity: 0;
+                will-change: transform, opacity;
+                animation: splashDrop 1s ease-out forwards;
             }
 
             &-1 {
@@ -90,6 +94,7 @@
                 right: 200px;
                 transform: rotate(90deg);
                 z-index: -1;
+                animation-delay: 0s;
             }
 
             &-2 {
@@ -98,7 +103,8 @@
                 transform: rotate(200deg);
                 z-index: -2;
                 filter: blur(1px);
-                opacity: 0.4;
+                --final-opacity: 0.4;
+                animation-delay: 0.15s;
             }
 
             &-3 {
@@ -106,12 +112,14 @@
                 right: 100px;
                 transform: rotate(200deg);
                 filter: blur(1px);
-                opacity: 0.75; 
+                --final-opacity: 0.75;
+                animation-delay: 0.3s;
             }
 
             &-4 {
                 top: 260px;
                 right: 110px;
+                animation-delay: 0.45s;
             }
 
             &-5 {
@@ -119,11 +127,13 @@
                 right: 75px;
                 transform: rotate(200deg);
                 z-index: -2;
+                animation-delay: 0.6s;
             }
 
             &-6 {
                 bottom: 185px;
                 right: 135px;
+                animation-delay: 0.75s;
             }
 
             &-7 {
@@ -131,12 +141,14 @@
                 right: 185px;
                 filter: blur(2px);
                 z-index: -2;
+                animation-delay: 0s;
             }
 
             &-8 {
                 bottom: 175px;
                 left: 50px;
                 transform: rotate(200deg);
+                animation-delay: 0.15s;
             }
 
             &-9 {
@@ -145,21 +157,24 @@
                 transform: rotate(200deg);
                 z-index: -2;
                 filter: blur(1px);
-                opacity: 0.4;
+                --final-opacity: 0.4;
+                animation-delay: 0.3s;
             }
 
             &-10 {
                 bottom: 40px;
                 left: 100px;
                 transform: rotate(-75deg);
+                animation-delay: 0.45s;
             }
 
             &-11 {
                 bottom: 20px;
                 left: 150px;
                 filter: blur(1px);
-                opacity: 0.8;
+                --final-opacity: 0.8;
                 z-index: -2;
+                animation-delay: 0.6s;
             }
 
             &-12 {
@@ -167,13 +182,15 @@
                 left: 280px;
                 filter: blur(1.2px);
                 transform: rotate(175deg) scaleX(-1);
-                opacity: 0.8;
+                --final-opacity: 0.8;
                 z-index: -2;
+                animation-delay: 0.75s;
             }
 
             &-13 {
                 bottom: 20px;
                 left: 425px;
+                animation-delay: 0s;
             }
 
             &-14 {
@@ -181,6 +198,7 @@
                 left: 400px;
                 transform: rotate(-155deg);
                 z-index: -2;
+                animation-delay: 0.15s;
             }
         }
     }
