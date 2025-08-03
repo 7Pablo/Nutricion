@@ -18,13 +18,15 @@ export default async function LandingPage({params}) {
           <section id="start" className="start">
             <div className="start__content">
               <div className="start__left">
-                <div className="start__left--text">
-                  <h1>{trans.start.title}</h1>
-                  <h2>{trans.start.subtitle}</h2>
+                <div className="start__left--container">
+                  <div className="start__left--text">
+                    <h1>{trans.start.title}</h1>
+                    <h2>{trans.start.subtitle}</h2>
+                  </div>
+                  <Button type="primary">
+                    {trans.buttons.begin}
+                  </Button>
                 </div>
-                <Button type="primary">
-                  {trans.buttons.begin}
-                </Button>
               </div>
               <div className="start__right">
                 <Image 
@@ -35,25 +37,29 @@ export default async function LandingPage({params}) {
                 />
                 <div className="start__right--overlay"/>
               </div>
-              <div className="start__background">
-                <div className="start__background--balls-1">
-                  <Image
-                    src="/images/purple-balls.png"
-                    alt="Fondo de formas moradas"
-                    height={600}
-                    width={600}
-                  />
-                </div>
-                <div className="start__background--balls-2">
-                  <Image
-                    src="/images/purple-balls.png"
-                    alt="Fondo de formas moradas"
-                    height={600}
-                    width={600}
-                  />
-                </div>
 
-                {/* Right */}
+              {/* Decoration */}
+              <div className="start__decoration">
+                <div className="start__decoration--balls-1">
+                  <Image
+                    src="/images/purple-balls.png"
+                    alt="Fondo de formas moradas"
+                    height={600}
+                    width={600}
+                  />
+                </div>
+                <div className="start__decoration--balls-2">
+                  <Image
+                    src="/images/purple-balls.png"
+                    alt="Fondo de formas moradas"
+                    height={600}
+                    width={600}
+                  />
+                </div>
+              </div>
+
+              {/* Background */}
+              <div className="start__background">
                 <div className="start__background--fruit-1">
                   <Image
                     src="/images/leaf-one2.png"
@@ -110,8 +116,6 @@ export default async function LandingPage({params}) {
                     width={60}
                   />
                 </div>
-
-                {/* Left */}
                 <div className="start__background--fruit-8">
                   <Image
                     src="/images/leaf-three2.png"
