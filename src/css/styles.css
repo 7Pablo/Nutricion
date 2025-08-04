@@ -238,6 +238,8 @@ a:focus {
 .start__background--fruit-4 {
   top: 260px;
   right: 60px;
+  --initial-transform: rotate(0deg);
+  --final-opacity: 1;
   animation-delay: 0.45s;
 }
 .start__background--fruit-5 {
@@ -250,12 +252,16 @@ a:focus {
 .start__background--fruit-6 {
   bottom: 235px;
   right: 85px;
+  --initial-transform: rotate(0deg);
+  --final-opacity: 1;
   animation-delay: 0.75s;
 }
 .start__background--fruit-7 {
   bottom: 285px;
   right: 135px;
   filter: blur(2px);
+  --initial-transform: rotate(0deg);
+  --final-opacity: 1;
   z-index: -2;
   animation-delay: 0s;
 }
@@ -281,10 +287,11 @@ a:focus {
   animation-delay: 0.45s;
 }
 .start__background--fruit-11 {
-  bottom: 20px;
+  bottom: 30px;
   left: 150px;
   filter: blur(1px);
   --final-opacity: 0.8;
+  --initial-transform: rotate(0deg);
   z-index: -2;
   animation-delay: 0.6s;
 }
@@ -300,6 +307,8 @@ a:focus {
 .start__background--fruit-13 {
   bottom: 20px;
   left: 425px;
+  --initial-transform: rotate(0deg);
+  --final-opacity: 1;
   animation-delay: 0s;
 }
 .start__background--fruit-14 {
@@ -320,6 +329,71 @@ a:focus {
   .start__left h1 {
     font-size: 70px;
     line-height: 60px;
+  }
+  .start__decoration--balls-1 img, .start__decoration--balls-2 img {
+    width: clamp(200px, 40vw, 600px);
+  }
+  .start__decoration--balls-1 {
+    right: -200px;
+    transform: rotate(-20deg);
+  }
+  .start__decoration--balls-2 {
+    bottom: -325px;
+  }
+  .start__background--fruit-1 {
+    --initial-transform: rotate(90deg) scale(0.9);
+  }
+  .start__background--fruit-2 {
+    top: 175px;
+    right: 110px;
+    --initial-transform: rotate(200deg) scale(0.9);
+  }
+  .start__background--fruit-3 {
+    --initial-transform: rotate(200deg) scale(0.9);
+  }
+  .start__background--fruit-4 {
+    --initial-transform: rotate(0deg) scale(0.9);
+  }
+  .start__background--fruit-5 {
+    top: 295px;
+    right: 20px;
+    --initial-transform: rotate(200deg) scale(0.9);
+  }
+  .start__background--fruit-6 {
+    bottom: 170px;
+    right: 60px;
+    --initial-transform: rotate(0deg) scale(0.9);
+  }
+  .start__background--fruit-7 {
+    bottom: 215px;
+    right: 105px;
+    --initial-transform: rotate(0deg) scale(0.9);
+  }
+  .start__background--fruit-8 {
+    bottom: 155px;
+    --initial-transform: rotate(200deg) scale(0.9);
+  }
+  .start__background--fruit-9 {
+    bottom: 125px;
+    left: 110px;
+    --initial-transform: rotate(200deg) scale(0.9);
+  }
+  .start__background--fruit-10 {
+    --initial-transform: rotate(-75deg) scale(0.9);
+  }
+  .start__background--fruit-11 {
+    bottom: 40px;
+    --initial-transform: rotate(0deg) sclae(0.9);
+  }
+  .start__background--fruit-12 {
+    --initial-transform: rotate(175deg) scaleX(-0.9);
+  }
+  .start__background--fruit-13 {
+    bottom: 25px;
+    --initial-transform: rotate(0deg) scale(0.9);
+  }
+  .start__background--fruit-14 {
+    --initial-transform: rotate(-155deg) scale(0.9);
   }
 }
 @media (max-width: 1200px) {
@@ -345,6 +419,80 @@ a:focus {
   }
   .start__left h2 {
     max-width: 325px;
+  }
+  .start__decoration--balls-1 {
+    right: -125px;
+    transform: rotate(-20deg);
+  }
+  .start__decoration--balls-2 {
+    bottom: -250px;
+  }
+  .start__background--fruit-1 {
+    top: 100px;
+    right: 100px;
+    --initial-transform: rotate(90deg) scale(0.7);
+  }
+  .start__background--fruit-2 {
+    top: 125px;
+    right: 75px;
+    --initial-transform: rotate(200deg) scale(0.7);
+  }
+  .start__background--fruit-3 {
+    display: none;
+  }
+  .start__background--fruit-4 {
+    top: 200px;
+    right: 40px;
+    --initial-transform: rotate(0deg) scale(0.7);
+  }
+  .start__background--fruit-5 {
+    top: 220px;
+    right: 20px;
+    --initial-transform: rotate(200deg) scale(0.7);
+  }
+  .start__background--fruit-6 {
+    bottom: 100px;
+    right: 40px;
+    --initial-transform: rotate(0deg) scale(0.7);
+  }
+  .start__background--fruit-7 {
+    bottom: 140px;
+    right: 75px;
+    z-index: -5;
+    --initial-transform: rotate(0deg) scale(0.7);
+  }
+  .start__background--fruit-8 {
+    bottom: 70px;
+    left: 30px;
+    --initial-transform: rotate(200deg) scale(0.7);
+  }
+  .start__background--fruit-9 {
+    bottom: 50px;
+    left: 85px;
+    --initial-transform: rotate(200deg) scale(0.7);
+  }
+  .start__background--fruit-10 {
+    bottom: 20px;
+    left: 150px;
+    --initial-transform: rotate(-75deg) scale(0.7);
+  }
+  .start__background--fruit-11 {
+    bottom: 10px;
+    left: 185px;
+    --initial-transform: rotate(0deg) scale(0.7);
+  }
+  .start__background--fruit-12 {
+    display: none;
+  }
+  .start__background--fruit-13 {
+    bottom: 50px;
+    left: 300px;
+    --initial-transform: rotate(0deg) scale(0.7);
+  }
+  .start__background--fruit-14 {
+    bottom: 70px;
+    left: 280px;
+    --initial-transform: rotate(-155deg) scale(0.7);
   }
 }
 @media (max-width: 800px) {
@@ -382,6 +530,72 @@ a:focus {
   .start__right--overlay {
     display: none;
   }
+  .start__decoration--balls-1 {
+    right: 0px;
+    top: 350px;
+    transform: rotate(-30deg) scale(2.2);
+  }
+  .start__decoration--balls-2 {
+    bottom: 100px;
+    transform: rotate(-10deg) scale(2);
+  }
+  .start__background--fruit-1 {
+    top: 100px;
+    right: 100px;
+    --initial-transform: rotate(90deg) scale(0.7);
+  }
+  .start__background--fruit-2 {
+    top: 125px;
+    right: 75px;
+    --initial-transform: rotate(200deg) scale(0.7);
+  }
+  .start__background--fruit-4 {
+    top: 200px;
+    right: 40px;
+    --initial-transform: rotate(0deg) scale(0.7);
+  }
+  .start__background--fruit-5 {
+    top: 220px;
+    right: 20px;
+    --initial-transform: rotate(200deg) scale(0.7);
+  }
+  .start__background--fruit-6 {
+    bottom: 100px;
+    right: 40px;
+    --initial-transform: rotate(0deg) scale(0.7);
+  }
+  .start__background--fruit-7 {
+    bottom: 140px;
+    right: 75px;
+    z-index: -5;
+    --initial-transform: rotate(0deg) scale(0.7);
+  }
+  .start__background--fruit-8 {
+    bottom: 70px;
+    left: 30px;
+    --initial-transform: rotate(200deg) scale(0.7);
+  }
+  .start__background--fruit-9 {
+    bottom: 50px;
+    left: 85px;
+    --initial-transform: rotate(200deg) scale(0.7);
+  }
+  .start__background--fruit-10 {
+    bottom: 20px;
+    left: 150px;
+    --initial-transform: rotate(-75deg) scale(0.7);
+  }
+  .start__background--fruit-11 {
+    bottom: 10px;
+    left: 185px;
+    --initial-transform: rotate(0deg) scale(0.7);
+  }
+  .start__background--fruit-13 {
+    display: none;
+  }
+  .start__background--fruit-14 {
+    display: none;
+  }
 }
 @media (max-width: 550px) {
   .start__left {
@@ -398,6 +612,15 @@ a:focus {
   }
   .start__left h2 {
     max-width: 300px;
+  }
+  .start__decoration--balls-1 {
+    right: -50px;
+    top: 350px;
+    transform: rotate(-30deg) scale(1.6);
+  }
+  .start__decoration--balls-2 {
+    bottom: 50px;
+    transform: rotate(-30deg) scale(1.6);
   }
 }
 .navbar {
@@ -607,7 +830,7 @@ a:focus {
 }
 .toggle-button .chakra-switch__control .chakra-switch__thumb {
   background-color: #fff;
-  transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out !important;
 }
 .toggle-button .chakra-switch__control:hover .chakra-switch__thumb {
   transform: scale(0.8);

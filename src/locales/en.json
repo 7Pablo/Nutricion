@@ -1,7 +1,7 @@
 {
     "navbar": {
         "button": "Nutritionist",
-        "start": "Home",
+        "start": "Start",
         "about": "About Me",
         "services": "Services",
         "contact": "Contact"

@@ -16,10 +16,10 @@ export default async function Navbar({lang}) {
             <div className="navbar__content">
                 <NavbarButton trans={trans} />
                 <div className="navbar__items">
-                    <a href="#start"><span className="nav-inner">Start</span></a>
-                    <a href="#about"><span className="nav-inner">About</span></a>
-                    <a href="#services"><span className="nav-inner">Services</span></a>
-                    <a href="#contact"><span className="nav-inner">Contact</span></a>
+                    <a href="#start"><span className="nav-inner">{trans.navbar.start}</span></a>
+                    <a href="#about"><span className="nav-inner">{trans.navbar.about}</span></a>
+                    <a href="#services"><span className="nav-inner">{trans.navbar.services}</span></a>
+                    <a href="#contact"><span className="nav-inner">{trans.navbar.contact}</span></a>
                 </div>
                 <ToggleButton lang={lang} />
                 <HamDropdown 
