@@ -225,9 +225,17 @@
 
     &__scroller {
         background-color: $purple-primary;
+        position: relative;
         width: 100%;
-        height: 80px;
+        height: 85px;
+        overflow: hidden;
         z-index: 2;
+
+        &--image {
+            img {
+                width: 100%;
+            }
+        }
     }
 }
 
@@ -505,12 +513,13 @@
         &__decoration {
             &--balls {
                 &-1 { 
-                    right: 0px;
-                    top: 350px;
+                    right: -125px;
+                    top: 400px;
                     transform: rotate(-30deg) scale(2.2);
                 }
 
                 &-2 {
+                    left: -175px;
                     bottom: 100px;
                     transform: rotate(-10deg) scale(2);
                 }
@@ -520,64 +529,59 @@
         &__background {
             &--fruit {
                 &-1 {
-                    top: 100px;
-                    right: 100px;
-                    --initial-transform: rotate(90deg) scale(0.7);
+                    top: 350px;
+                    right: 125px;
+                    --initial-transform: rotate(90deg) scale(1);
                 }
 
                 &-2 {
-                    top: 125px;
-                    right: 75px;
-                    --initial-transform: rotate(200deg) scale(0.7);
+                    top: 375px;
+                    right: 85px;
+                    --initial-transform: rotate(200deg) scale(1);
                 }
 
                 &-4 {
-                    top: 200px;
-                    right: 40px;
-                    --initial-transform: rotate(0deg) scale(0.7);
+                    top: 500px;
+                    --initial-transform: rotate(0deg) scale(0.9);
                 }
 
                 &-5 {
-                    top: 220px;
-                    right: 20px;
-                    --initial-transform: rotate(200deg) scale(0.7);
+                    top: 540px;
+                    --initial-transform: rotate(200deg) scale(0.9);
                 }
 
                 &-6 {
-                    bottom: 100px;
-                    right: 40px;
-                    --initial-transform: rotate(0deg) scale(0.7);
+                    bottom: 175px;
+                    --initial-transform: rotate(0deg) scale(0.9);
                 }
 
                 &-7 {
-                    bottom: 140px;
-                    right: 75px;
-                    z-index: -5;
-                    --initial-transform: rotate(0deg) scale(0.7);
+                    bottom: 225px;
+                    --initial-transform: rotate(0deg) scale(0.9);
                 }
 
                 &-8 {
-                    bottom: 70px;
-                    left: 30px;
-                    --initial-transform: rotate(200deg) scale(0.7);
+                    bottom: 475px;
+                    left: 40px;
+                    --initial-transform: rotate(200deg) scale(0.9);
                 }
 
                 &-9 {
-                    bottom: 50px;
-                    left: 85px;
-                    --initial-transform: rotate(200deg) scale(0.7);
+                    bottom: 450px;
+                    left: 105px;
+                    --initial-transform: rotate(200deg) scale(0.9);
                 }
 
                 &-10 {
-                    bottom: 20px;
-                    left: 150px;
-                    --initial-transform: rotate(-75deg) scale(0.7);
+                    bottom: 310px;
+                    left: 45px;
+                    --initial-transform: rotate(-75deg) scale(0.9);
                 }
 
                 &-11 {
-                    bottom: 10px;
-                    left: 185px;
-                    --initial-transform: rotate(0deg) scale(0.7);
+                    bottom: 295px;
+                    left: 90px;
+                    --initial-transform: rotate(0deg) scale(0.9);
                 }
 
                 &-13 {
@@ -607,6 +611,7 @@
             h1 {
                 font-size: 45px;
                 line-height: 45px;
+                max-width: 300px;
             }
 
             h2 {
@@ -617,14 +622,80 @@
         &__decoration {
             &--balls {
                 &-1 { 
-                    right: -50px;
+                    right: -100px;
                     top: 350px;
-                    transform: rotate(-30deg) scale(1.6);
+                    transform: rotate(-30deg) scale(2.2);
                 }
 
                 &-2 {
-                    bottom: 50px;
-                    transform: rotate(-30deg) scale(1.6);
+                    left: -150px;
+                    bottom: 80px;
+                    transform: rotate(-10deg) scale(2);
+                }
+            }
+        }
+
+        &__background {
+            &--fruit {
+                &-1 {
+                    top: 300px;
+                    right: 70px;
+                    --initial-transform: rotate(90deg) scale(0.7);
+                }
+
+                &-2 {
+                    top: 325px;
+                    right: 45px;
+                    --initial-transform: rotate(200deg) scale(0.7);
+                }
+
+                &-4 {
+                    top: 400px;
+                    right: 15px;
+                    --initial-transform: rotate(0deg) scale(0.6);
+                }
+
+                &-5 {
+                    top: 415px;
+                    right: -5px;
+                    --initial-transform: rotate(200deg) scale(0.6);
+                }
+
+                &-6 {
+                    top: 570px;
+                    right: 0px;
+                    --initial-transform: rotate(0deg) scale(0.5);
+                }
+
+                &-7 {
+                    top: 570px;
+                    right: 30px;
+                    --initial-transform: rotate(0deg) scale(0.5);
+
+                }
+
+                &-8 {
+                    top: 400px;
+                    left: 20px;
+                    --initial-transform: rotate(200deg) scale(0.6);
+                }
+
+                &-9 {
+                    top: 415px;
+                    left: 70px;
+                    --initial-transform: rotate(200deg) scale(0.6);
+                }
+
+                &-10 {
+                    top: 500px;
+                    left: -10px;
+                    --initial-transform: rotate(-75deg) scale(0.6);
+                }
+
+                &-11 {
+                    top: 515px;
+                    left: 50px;
+                    --initial-transform: rotate(0deg) scale(0.6);
                 }
             }
         }

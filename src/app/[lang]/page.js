@@ -3,6 +3,7 @@
 import { getTranslations } from "@/locales/translations";
 import Image from "next/image";
 import Button from "@/components/buttons/Button";
+import Scroller from "@/components/Scroller";
 
 // LandingPage
 export default async function LandingPage({params}) {
@@ -174,9 +175,12 @@ export default async function LandingPage({params}) {
                 </div>
               </div>
             </div>
-            <div className="start__scroller">
+            <Scroller />
+          </section>
 
-            </div>
+          {/* Summary */}
+          <section id="summary" className="summary">
+
           </section>
 
         </div>
