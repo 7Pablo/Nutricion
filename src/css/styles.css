@@ -105,6 +105,17 @@ a:focus {
     opacity: var(--final-opacity, 1);
   }
 }
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .start {
   display: flex;
   flex-direction: column;
@@ -319,15 +330,41 @@ a:focus {
   animation-delay: 0.15s;
 }
 .start__scroller {
-  background-color: #6D64AF;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+  background-color: #8378DA;
   position: relative;
   width: 100%;
   height: 85px;
   overflow: hidden;
   z-index: 2;
 }
-.start__scroller--image img {
+.start__scroller--image {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  background-image: url("/images/fruits.png");
+  background-repeat: repeat-x;
+  background-position: top;
+  background-size: 1400px 500px;
+  will-change: background-position;
+  transition: background-position 0.05s ease-out;
+  filter: grayscale(100%) contrast(90%);
+}
+.start__scroller--mouse, .start__scroller--arrow {
+  cursor: pointer;
+  animation: float 2.5s ease-in-out infinite;
+}
+.start__scroller--mouse:hover, .start__scroller--arrow:hover {
+  transform: scale(1.05);
+}
+.start__scroller--arrow {
+  display: none;
 }
 
 @media (max-width: 1440px) {
@@ -596,6 +633,15 @@ a:focus {
   }
   .start__background--fruit-14 {
     display: none;
+  }
+  .start__scroller--image {
+    background-size: 1200px 357px;
+  }
+  .start__scroller--mouse {
+    display: none;
+  }
+  .start__scroller--arrow {
+    display: block;
   }
 }
 @media (max-width: 550px) {

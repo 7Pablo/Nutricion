@@ -31,7 +31,7 @@ export default async function LandingPage({params}) {
               </div>
               <div className="start__right">
                 <Image 
-                  src="/pictures/start_picture.webp"
+                  src="/pictures/start-picture.png"
                   alt="Maria Gracia Yturralde"
                   height={500}
                   width={500}

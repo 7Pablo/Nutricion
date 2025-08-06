@@ -224,17 +224,40 @@
     }
 
     &__scroller {
-        background-color: $purple-primary;
+        @include flex();
+        background-color: $scroller-purple;
         position: relative;
         width: 100%;
         height: 85px;
         overflow: hidden;
         z-index: 2;
-
+    
         &--image {
-            img {
-                width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('/images/fruits.png');
+            background-repeat: repeat-x;
+            background-position: top;
+            background-size: 1400px 500px;
+            will-change: background-position;
+            transition: background-position 0.05s ease-out;
+            filter: grayscale(100%) contrast(90%);
+        }
+
+        &--mouse, &--arrow {
+            cursor: pointer;
+            animation: float 2.5s ease-in-out infinite;
+
+            &:hover {
+                transform: scale(1.05);
             }
+        }
+
+        &--arrow {
+            display: none;
         }
     }
 }
@@ -591,6 +614,20 @@
                 &-14 {
                     display: none;
                 }
+            }
+        }
+
+        &__scroller {
+            &--image {
+                background-size: 1200px 357px;
+            }
+
+            &--mouse {
+                display: none;
+            }
+
+            &--arrow {
+                display: block;
             }
         }
     }

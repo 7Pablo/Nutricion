@@ -8,10 +8,10 @@ export default function Scroller() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const speed = 0.3; 
+      const speed = 0.25; 
 
       if (imageRef.current) {
-        imageRef.current.style.transform = `translateY(${scrollY * speed}px)`;
+        imageRef.current.style.backgroundPositionY = `${-scrollY * speed}px`;
       }
     };
 
@@ -19,15 +19,36 @@ export default function Scroller() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToSummary = () => {
+    const target = document.getElementById('summary');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="start__scroller">
-      <div className="start__scroller--image" ref={imageRef}>
+      <div className="start__scroller--image" ref={imageRef}></div>
+      <div 
+        className='start__scroller--mouse'
+        onClick={() => scrollToSummary()}
+      >
         <Image
-          src="/images/fruits.png"
-          alt="Fondo de frutas"
-          height={600}
-          width={600}
-          style={{ objectFit: 'cover' }}
+          src="/icons/mouse-icon.png"
+          alt="Scroller icon"
+          height={40}
+          width={40}
+        />
+      </div>
+      <div 
+        className='start__scroller--arrow'
+        onClick={() => scrollToSummary()}
+      >
+        <Image
+          src="/icons/arrow-icon.png"
+          alt="Scroller icon"
+          height={35}
+          width={35}
         />
       </div>
     </div>
