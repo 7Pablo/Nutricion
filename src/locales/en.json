@@ -12,6 +12,20 @@
         "subtitle": "Specialized nutritional support for every stage of your feminine well-being."
     },
 
+    "summary": {
+        "top": "Benefits of working with me and",
+        "center": "How I can support you",
+        "bottom": "I’ll help you reconnect with your health through food, at every stage of your life.",
+        "card_title1": "Women's hormonal health",
+        "card_body1": "Balance your cycle, energy, and overall well-being through nutrition.",
+        "card_title2": "Healthy relationship with food",
+        "card_body2": "Learn to nourish yourself without guilt or extreme diets.",
+        "card_title3": "More energy, less stress",
+        "card_body3": "Improve your digestion, mood, and daily vitality.",
+        "card_title4": "Healthy, sustainable weight",
+        "card_body4": "Achieve real results without giving up the foods you enjoy."
+    },
+
     "buttons": {
         "begin": "Let's get started"
     }

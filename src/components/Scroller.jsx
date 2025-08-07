@@ -34,8 +34,8 @@ export default function Scroller() {
         onClick={() => scrollToSummary()}
       >
         <Image
-          src="/icons/mouse-icon.png"
-          alt="Scroller icon"
+          src="/icons/mouse.png"
+          alt="Icono de mouse"
           height={40}
           width={40}
         />
@@ -45,8 +45,8 @@ export default function Scroller() {
         onClick={() => scrollToSummary()}
       >
         <Image
-          src="/icons/arrow-icon.png"
-          alt="Scroller icon"
+          src="/icons/arrow.png"
+          alt="Icono de flecha"
           height={35}
           width={35}
         />

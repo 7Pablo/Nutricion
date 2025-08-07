@@ -4,6 +4,7 @@ import { getTranslations } from "@/locales/translations";
 import Image from "next/image";
 import Button from "@/components/buttons/Button";
 import Scroller from "@/components/Scroller";
+import ServiceCard from "@/components/cards/ServiceCard";
 
 // LandingPage
 export default async function LandingPage({params}) {
@@ -180,7 +181,37 @@ export default async function LandingPage({params}) {
 
           {/* Summary */}
           <section id="summary" className="summary">
-
+            <div className="summary__text">
+              <h3>{trans.summary.top}</h3>
+              <h2>{trans.summary.center}</h2>
+              <h4>{trans.summary.bottom}</h4>
+            </div>
+            <div className="summary__cards">
+              <ServiceCard
+                img="/icons/cycle.png"
+                alt="Icono de flechas en ciclo"
+                title={trans.summary.card_title1}
+                body={trans.summary.card_body1}
+              />
+              <ServiceCard
+                img="/icons/apple.png"
+                alt="Icono de manzana"
+                title={trans.summary.card_title2}
+                body={trans.summary.card_body2}
+              />
+              <ServiceCard
+                img="/icons/leaf.png"
+                alt="Icono de hoja"
+                title={trans.summary.card_title3}
+                body={trans.summary.card_body3}
+              />
+              <ServiceCard
+                img="/icons/heart.png"
+                alt="Icono de corazon"
+                title={trans.summary.card_title4}
+                body={trans.summary.card_body4}
+              />
+            </div>
           </section>
 
         </div>

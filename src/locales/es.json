@@ -12,6 +12,20 @@
         "subtitle": "Acompañamiento nutricional especializado en cada etapa de tu bienestar femenino."
     },
 
+    "summary": {
+        "top": "Beneficios de trabajar conmigo y",
+        "center": "Cómo puedo ayudarte",
+        "bottom": "Te acompaño a reconectar con tu salud desde la alimentación, en cada etapa de tu vida.",
+        "card_title1": "Salud hormonal femenina",
+        "card_body1": "Equilibra tu ciclo, energía y bienestar desde lo que comes.",
+        "card_title2": "Relación saludable con la comida",
+        "card_body2": "Aprende a nutrirte sin culpa ni dietas extremas.",
+        "card_title3": "Más energía, menos estrés",
+        "card_body3": "Mejora tu digestión, ánimo y vitalidad diaria.",
+        "card_title4": "Peso saludable y sostenible",
+        "card_body4": "Logra resultados reales sin dejar de disfrutar tus alimentos."
+    },
+
     "buttons": {
         "begin": "Comencémos"
     }

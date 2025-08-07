@@ -85,3 +85,20 @@
   50% { transform: translateY(-10px); }
   100% { transform: translateY(0); }
 }
+
+@keyframes cardShuffleIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px) rotate(-10deg) scale(0.95);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(10px) rotate(3deg) scale(1.03);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+}

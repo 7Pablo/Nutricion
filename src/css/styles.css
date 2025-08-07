@@ -116,6 +116,20 @@ a:focus {
     transform: translateY(0);
   }
 }
+@keyframes cardShuffleIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px) rotate(-10deg) scale(0.95);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(10px) rotate(3deg) scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+}
 .start {
   display: flex;
   flex-direction: column;
@@ -723,7 +737,59 @@ a:focus {
   }
 }
 .summary {
-  height: 3000px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: linear-gradient(to bottom, rgb(255, 255, 255) 70%, rgba(110, 97, 212, 0.2) 100%);
+  padding: 68px 50px 120px;
+  text-align: center;
+}
+.summary__text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.summary__text h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: #9F9F9F;
+  line-height: 30px;
+  line-height: 22px;
+  letter-spacing: 4px;
+}
+.summary__text h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  color: #6D64AF;
+  line-height: 60px;
+}
+.summary__text h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #3C3C3C;
+  line-height: 30px;
+  line-height: 24px;
+  margin-top: 15px;
+  max-width: 500px;
+}
+.summary__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: auto auto;
+  gap: 0px;
+  width: 100%;
+  justify-items: center;
+  max-width: 1200px;
+  row-gap: 40px;
 }
 
 .navbar {
@@ -862,6 +928,44 @@ a:focus {
     display: none;
   }
 }
+.service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  box-shadow: 0px 10px 30px -7px #6E61D4;
+  max-width: 250px;
+  width: 100%;
+  border-radius: 15px;
+  padding: 30px 32px;
+}
+.service-card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.service-card__text h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  line-height: 30px;
+  line-height: 20px;
+}
+.service-card__text p {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #3C3C3C;
+  line-height: 26px;
+  line-height: 20px;
+}
+
 .button--primary, .button--secondary {
   font-family: "Poppins", sans-serif;
   font-size: 18px;

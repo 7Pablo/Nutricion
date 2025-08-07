@@ -1,3 +1,38 @@
 .summary {
-    height: 3000px;
+    @include flex($gap: 60px);
+    width: 100%;
+    background: linear-gradient(to bottom,rgb(255, 255, 255) 70%, rgba($purple-secondary, 0.2) 100%);
+    padding: 68px 50px 120px;
+    text-align: center;
+
+    &__text {
+        @include flex($gap: 5px);
+        width: 100%;
+
+        h3 {
+            @include body-font($size: 20px, $weight: 300, $color: $gray-lighter);
+            line-height: 22px;
+            letter-spacing: 4px;
+        }
+
+        h2 {
+            @include title-font($size: 50px, $color: $purple-primary); 
+        }
+
+        h4 {
+            @include body-font($size: 20px, $color: $gray);
+            line-height: 24px;
+            margin-top: 15px;
+            max-width: 500px;
+        }
+    }
+
+    &__cards {
+        @include grid($columns: repeat(auto-fit, minmax(300px, 1fr)));
+        width: 100%;
+        justify-items: center;
+        max-width: 1200px;
+        row-gap: 40px;
+
+    }
 }
