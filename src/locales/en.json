@@ -26,7 +26,15 @@
         "card_body4": "Achieve real results without giving up the foods you enjoy."
     },
 
+    "about": {
+        "top": "Nutritionist and expert in women's health",
+        "body1": "I graduated with a degree in Nutrition and Dietetics, and since then I have been dedicated to supporting women in different stages of their lives: from hormonal balance and the menstrual cycle, to conscious and sustainable eating.",
+        "body2": "I deeply believe in the power of nutrition as a tool for transformation, not only physical, but also emotional. My approach is personalized, without extreme restrictions, based on science, active listening, and education.",
+        "body3": "I am passionate about helping you reconnect with your well-being, feel at peace with your body, and make decisions that make you feel strong, informed, and happy."
+    },
+
     "buttons": {
-        "begin": "Let's get started"
+        "begin": "Let's get started",
+        "history": "See my story"
     }
 }

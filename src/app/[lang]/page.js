@@ -5,6 +5,7 @@ import Image from "next/image";
 import Button from "@/components/buttons/Button";
 import Scroller from "@/components/Scroller";
 import ServiceCard from "@/components/cards/ServiceCard";
+import AnimatedSection from "@/utils/AnimatedSection";
 
 // LandingPage
 export default async function LandingPage({params}) {
@@ -33,7 +34,7 @@ export default async function LandingPage({params}) {
               <div className="start__right">
                 <Image 
                   src="/pictures/start-picture.png"
-                  alt="Maria Gracia Yturralde"
+                  alt="Imagen de Maria Gracia Yturralde"
                   height={500}
                   width={500}
                 />
@@ -181,35 +182,89 @@ export default async function LandingPage({params}) {
 
           {/* Summary */}
           <section id="summary" className="summary">
-            <div className="summary__text">
-              <h3>{trans.summary.top}</h3>
-              <h2>{trans.summary.center}</h2>
-              <h4>{trans.summary.bottom}</h4>
-            </div>
+            <AnimatedSection animation="fadeInUp" delay={0.2}> 
+              <div className="summary__text">
+                <h3>{trans.summary.top}</h3>
+                <h2>{trans.summary.center}</h2>
+                <h4>{trans.summary.bottom}</h4>
+              </div>
+            </AnimatedSection>
             <div className="summary__cards">
-              <ServiceCard
-                img="/icons/cycle.png"
-                alt="Icono de flechas en ciclo"
-                title={trans.summary.card_title1}
-                body={trans.summary.card_body1}
+              <AnimatedSection animation='flipCard'>
+                <ServiceCard
+                  img="/icons/cycle.png"
+                  alt="Icono de flechas en ciclo"
+                  title={trans.summary.card_title1}
+                  body={trans.summary.card_body1}
+                />
+              </AnimatedSection>
+              <AnimatedSection animation='flipCard' delay={0.2}>
+                <ServiceCard
+                  img="/icons/apple.png"
+                  alt="Icono de manzana"
+                  title={trans.summary.card_title2}
+                  body={trans.summary.card_body2}
+                />
+              </AnimatedSection>
+              <AnimatedSection animation='flipCard' delay={0.4}>
+                <ServiceCard
+                  img="/icons/leaf.png"
+                  alt="Icono de hoja"
+                  title={trans.summary.card_title3}
+                  body={trans.summary.card_body3}
+                />
+              </AnimatedSection>
+              <AnimatedSection animation='flipCard' delay={0.6}>
+                <ServiceCard
+                  img="/icons/heart.png"
+                  alt="Icono de corazon"
+                  title={trans.summary.card_title4}
+                  body={trans.summary.card_body4}
+                />
+              </AnimatedSection>
+            </div>
+          </section>
+
+          {/* About */}
+          <section id="about" className="about">
+            <div className="about__top">
+              <Image
+                src="/pictures/about-picture.png"
+                alt="Imagen de Maria Gracia Yturralde"
+                height={300}
+                width={300}
               />
-              <ServiceCard
-                img="/icons/apple.png"
-                alt="Icono de manzana"
-                title={trans.summary.card_title2}
-                body={trans.summary.card_body2}
+              <div className="about__content">
+                <div className="about__content--text">
+                  <h3>{trans.about.top}</h3>
+                  <h2>María Gracia Yturralde</h2>
+                  <p>{trans.about.body1}</p>
+                  <p>{trans.about.body2}</p>
+                  <p>{trans.about.body3}</p>
+                </div>
+                <Button type="secondary">
+                  {trans.buttons.history}
+                </Button>
+              </div>
+            </div>
+            <div className="about__career">
+              <Image
+                src="/images/catolica.png"
+                alt="Logo de Universidad Catolica de Santiago de Guayaquil"
+                height={100}
+                width={100}
               />
-              <ServiceCard
-                img="/icons/leaf.png"
-                alt="Icono de hoja"
-                title={trans.summary.card_title3}
-                body={trans.summary.card_body3}
+              <Image
+                src="/images/uib.png"
+                alt="Logo de Universitat de les Illes Balears"
+                height={100}
+                width={100}
               />
-              <ServiceCard
-                img="/icons/heart.png"
-                alt="Icono de corazon"
-                title={trans.summary.card_title4}
-                body={trans.summary.card_body4}
+              <Image
+                src="/images/psc.png"
+                alt="Logo de Politecnico Superior de Colombia"
+                height={100}
+                width={100}
               />
             </div>
           </section>

@@ -26,7 +26,15 @@
         "card_body4": "Logra resultados reales sin dejar de disfrutar tus alimentos."
     },
 
+    "about": {
+        "top": "Nutricionista y experta en salud femenina",
+        "body1": "Me gradué como Licenciada en Nutrición y Dietética y desde entonces me he dedicado a acompañar a mujeres en distintas etapas de su vida: desde el equilibrio hormonal y el ciclo menstrual, hasta una alimentación consciente y sostenible.",
+        "body2": "Creo profundamente en el poder de la nutrición como herramienta de transformación, no solo física, sino también emocional. Mi enfoque es personalizado, sin restricciones extremas, basado en ciencia, escucha activa y educación.",
+        "body3": "Me apasiona ayudarte a reconectar con tu bienestar, sentirte en paz con tu cuerpo y tomar decisiones que te hagan sentir fuerte, informada y feliz."
+    },
+
     "buttons": {
-        "begin": "Comencémos"
+        "begin": "Comencémos",
+        "history": "Mira mi historia"
     }
 }

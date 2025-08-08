@@ -41,6 +41,10 @@
 
     &--secondary {
         background-color: $violet;
+
+        &::after {
+            background-color: $purple-primary;
+        }
     }
 
     &__text {

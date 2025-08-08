@@ -373,9 +373,11 @@ a:focus {
 .start__scroller--mouse, .start__scroller--arrow {
   cursor: pointer;
   animation: float 2.5s ease-in-out infinite;
+  transition: filter 0.3s ease;
 }
 .start__scroller--mouse:hover, .start__scroller--arrow:hover {
-  transform: scale(1.05);
+  animation-play-state: paused;
+  filter: brightness(0.8);
 }
 .start__scroller--arrow {
   display: none;
@@ -744,7 +746,7 @@ a:focus {
   justify-content: center;
   width: 100%;
   background: linear-gradient(to bottom, rgb(255, 255, 255) 70%, rgba(110, 97, 212, 0.2) 100%);
-  padding: 68px 50px 120px;
+  padding: 80px 50px 120px;
   text-align: center;
 }
 .summary__text {
@@ -783,15 +785,67 @@ a:focus {
 }
 .summary__cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, 300px);
   grid-template-rows: auto auto;
   gap: 0px;
   width: 100%;
   justify-items: center;
+  justify-content: center;
   max-width: 1200px;
   row-gap: 40px;
 }
 
+@media (max-width: 1440px) {
+  .summary__cards {
+    grid-template-columns: repeat(2, 300px);
+    grid-auto-rows: auto;
+  }
+}
+@media (max-width: 800px) {
+  .summary__text h3 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .summary__text h2 {
+    font-size: 40px;
+    line-height: 44px;
+  }
+  .summary__text h4 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .summary__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-template-rows: auto auto;
+    gap: 0px;
+    row-gap: 40px;
+  }
+}
+@media (max-width: 1200px) {
+  .summary {
+    padding: 60px 40px 100px;
+  }
+}
+@media (max-width: 550px) {
+  .summary {
+    padding: 50px 30px 80px;
+    gap: 40px;
+  }
+  .summary__text {
+    gap: 10px;
+  }
+  .summary__text h3 {
+    max-width: 300px;
+  }
+  .summary__text h2 {
+    font-size: 30px;
+    line-height: 34px;
+  }
+  .summary__text h4 {
+    max-width: 400px;
+  }
+}
 .navbar {
   display: flex;
   flex-direction: column;
@@ -938,6 +992,7 @@ a:focus {
   box-shadow: 0px 10px 30px -7px #6E61D4;
   max-width: 250px;
   width: 100%;
+  height: 100%;
   border-radius: 15px;
   padding: 30px 32px;
 }
@@ -953,7 +1008,7 @@ a:focus {
   font-family: "Raleway", sans-serif;
   font-size: 20px;
   font-weight: 600;
-  color: #000000;
+  color: #2B2B2B;
   line-height: 30px;
   line-height: 20px;
 }
@@ -1006,6 +1061,9 @@ a:focus {
 }
 .button--secondary {
   background-color: #A267E7;
+}
+.button--secondary::after {
+  background-color: #6D64AF;
 }
 .button__text {
   position: relative;

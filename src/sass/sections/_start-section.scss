@@ -250,9 +250,11 @@
         &--mouse, &--arrow {
             cursor: pointer;
             animation: float 2.5s ease-in-out infinite;
+            transition: filter 0.3s ease;
 
             &:hover {
-                transform: scale(1.05);
+                animation-play-state: paused;
+                filter: brightness(0.8);
             }
         }
 

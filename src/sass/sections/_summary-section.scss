@@ -2,7 +2,7 @@
     @include flex($gap: 60px);
     width: 100%;
     background: linear-gradient(to bottom,rgb(255, 255, 255) 70%, rgba($purple-secondary, 0.2) 100%);
-    padding: 68px 50px 120px;
+    padding: 80px 50px 120px;
     text-align: center;
 
     &__text {
@@ -28,11 +28,80 @@
     }
 
     &__cards {
-        @include grid($columns: repeat(auto-fit, minmax(300px, 1fr)));
+        @include grid($columns: repeat(auto-fit, 300px));
         width: 100%;
         justify-items: center;
+        justify-content: center;
         max-width: 1200px;
         row-gap: 40px;
+    }
+}
 
+// Responsive large 
+@include responsive(large) {
+    .summary {
+        &__cards {
+            grid-template-columns: repeat(2, 300px);
+            grid-auto-rows: auto;
+        }
+    }
+}
+
+// Responsive smedium
+@include responsive(smedium) {
+    .summary {
+        &__text {
+            h3 {
+                font-size: 18px;
+                line-height: 20px;
+            }
+
+            h2 {
+                font-size: 40px;
+                line-height: 44px;
+            }
+
+            h4 {
+                font-size: 18px;
+                line-height: 22px;
+            }
+        }
+
+        &__cards {
+            @include grid($columns: repeat(auto-fit, 300px));
+            row-gap: 40px;
+        }
+    }
+}
+
+// Responsive medium
+@include responsive(medium) {
+    .summary {
+        padding: 60px 40px 100px;
+    }
+}
+
+// Responsive small
+@include responsive(small) {
+    .summary {
+        padding: 50px 30px 80px;
+        gap: 40px;
+
+        &__text {
+            gap: 10px;
+            
+            h3 {
+                max-width: 300px;
+            }
+
+            h2 {
+                font-size: 30px;
+                line-height: 34px;
+            }
+
+            h4 {
+                max-width: 400px;
+            }
+        }
     }
 }
