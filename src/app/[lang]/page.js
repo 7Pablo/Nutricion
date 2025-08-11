@@ -182,7 +182,7 @@ export default async function LandingPage({params}) {
 
           {/* Summary */}
           <section id="summary" className="summary">
-            <AnimatedSection animation="fadeInUp" delay={0.2}> 
+            <AnimatedSection animation="fadeInUp" delay={0.2}>
               <div className="summary__text">
                 <h3>{trans.summary.top}</h3>
                 <h2>{trans.summary.center}</h2>
@@ -228,45 +228,130 @@ export default async function LandingPage({params}) {
           {/* About */}
           <section id="about" className="about">
             <div className="about__top">
-              <Image
-                src="/pictures/about-picture.png"
-                alt="Imagen de Maria Gracia Yturralde"
-                height={300}
-                width={300}
-              />
+              <div className="about__top--image">
+                <AnimatedSection animation="fadeInScale" delay={0}>
+                  <Image
+                    src="/pictures/about-picture.png"
+                    alt="Imagen de Maria Gracia Yturralde"
+                    height={400}
+                    width={400}
+                  />
+                </AnimatedSection>
+                <div className="about__top--background">
+                  <AnimatedSection animation="fallingLeafAnim" delay={0.2}>
+                    <div className="about__background--fruit-1">
+                      <Image
+                        src="/images/leaf-three1.png"
+                        alt="Hoja verde"
+                        height={75}
+                        width={75}
+                      />
+                    </div>
+                  </AnimatedSection>
+                  <AnimatedSection animation="fallingLeafAnimReverse" delay={0.2}>
+                    <div className="about__background--fruit-2">
+                      <Image
+                        src="/images/leaf-one2.png"
+                        alt="Hoja verde"
+                        height={65}
+                        width={65}
+                      />
+                    </div>
+                  </AnimatedSection>
+                  <AnimatedSection animation="fallingLeafAnim" delay={0.2}>
+                    <div className="about__background--fruit-3">
+                      <Image
+                        src="/images/leaf-three2.png"
+                        alt="Hoja verde"
+                        height={130}
+                        width={130}
+                      />
+                    </div>
+                  </AnimatedSection>
+                  <AnimatedSection animation="fallingLeafAnimReverse" delay={0.2}>
+                    <div className="about__background--fruit-4">
+                      <Image
+                        src="/images/leaf-one1.png"
+                        alt="Hoja verde"
+                        height={60}
+                        width={60}
+                      />
+                    </div>
+                  </AnimatedSection>
+                  <AnimatedSection animation="fallingLeafAnim" delay={0.2}>
+                    <div className="about__background--fruit-5">
+                      <Image
+                        src="/images/leaf-one2.png"
+                        alt="Hoja verde"
+                        height={65}
+                        width={65}
+                      />
+                    </div>
+                  </AnimatedSection>
+                  <AnimatedSection animation="fallingLeafAnimReverse" delay={0.2}>
+                    <div className="about__background--fruit-6">
+                      <Image
+                        src="/images/leaf-two.png"
+                        alt="Hoja verde"
+                        height={95}
+                        width={95}
+                      />
+                    </div>
+                  </AnimatedSection>
+                </div>
+              </div>
               <div className="about__content">
                 <div className="about__content--text">
-                  <h3>{trans.about.top}</h3>
-                  <h2>María Gracia Yturralde</h2>
-                  <p>{trans.about.body1}</p>
-                  <p>{trans.about.body2}</p>
-                  <p>{trans.about.body3}</p>
+                  <AnimatedSection animation="slideFromRight" delay={0.2}>
+                    <h3>{trans.about.top}</h3>
+                  </AnimatedSection>
+                  <AnimatedSection animation="slideFromRight" delay={0.4}>
+                    <h2>María Gracia Yturralde</h2>
+                  </AnimatedSection>
+                  <AnimatedSection animation="slideFromRight" delay={0.6}>
+                    <p>{trans.about.body1}</p>
+                  </AnimatedSection>
+                  <AnimatedSection animation="slideFromRight" delay={0.8}>
+                    <p>{trans.about.body2}</p>
+                  </AnimatedSection>
+                  <AnimatedSection animation="slideFromRight" delay={1}>
+                    <p>{trans.about.body3}</p>
+                  </AnimatedSection>
                 </div>
-                <Button type="secondary">
-                  {trans.buttons.history}
-                </Button>
+                <AnimatedSection animation="slideFromRight" delay={1.2}>
+                  <Button type="secondary">
+                    {trans.buttons.history}
+                  </Button>
+                </AnimatedSection>
               </div>
-            </div>
-            <div className="about__career">
-              <Image
-                src="/images/catolica.png"
-                alt="Logo de Universidad Catolica de Santiago de Guayaquil"
-                height={100}
-                width={100}
-              />
-              <Image
-                src="/images/uib.png"
-                alt="Logo de Universitat de les Illes Balears"
-                height={100}
-                width={100}
-              />
-              <Image
-                src="/images/psc.png"
-                alt="Logo de Politecnico Superior de Colombia"
-                height={100}
-                width={100}
-              />
-            </div>
+              </div>
+            <AnimatedSection animation="fadeInUp" delay={0.2}>
+              <div className="about__bottom">
+                <Image
+                  src="/images/catolica.png"
+                  alt="Logo de Universidad Catolica de Santiago de Guayaquil"
+                  height={225}
+                  width={225}
+                />
+                <Image
+                  src="/images/uib.png"
+                  alt="Logo de Universitat de les Illes Balears"
+                  height={225}
+                  width={225}
+                />
+                <Image
+                  src="/images/psc.png"
+                  alt="Logo de Politecnico Superior de Colombia"
+                  height={225}
+                  width={225}
+                />
+              </div>
+            </AnimatedSection>
+          </section>
+
+          {/* Services */}
+          <section id="services" className="services">
+
           </section>
 
         </div>

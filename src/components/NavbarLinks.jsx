@@ -3,7 +3,6 @@
 import { smoothScroll } from '@/utils/smoothScroll';
 
 export default function NavbarLinks({ trans }) {
-  // handler to intercept default and do smooth scroll
   const handleClick = (e, targetId) => {
     e.preventDefault();
     smoothScroll(targetId, 1000);

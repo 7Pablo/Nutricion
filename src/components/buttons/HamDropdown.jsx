@@ -1,4 +1,3 @@
-// HamDropdown.jsx (Client component)
 "use client";
 
 import { Menu } from "@chakra-ui/react";
@@ -8,6 +7,15 @@ import ToggleButton from "./ToggleButton";
 
 export default function HamDropdown({ trans, lang }) {
   const [isOpen, setIsOpen] = useState(false);
+
+  const scrollToSection = (e, id) => {
+    e.preventDefault();
+    const el = document.querySelector(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false); 
+    }
+  };
 
   return (
     <div className="ham-dropdown">
@@ -25,29 +33,37 @@ export default function HamDropdown({ trans, lang }) {
         <Menu.Positioner>
           <Menu.Content className="ham-dropdown__content">
             <div>
-                <div className="ham-dropdown__item">
-                    <Menu.Item>
-                        <a href="#start">{trans.navbar.start}</a>
-                    </Menu.Item>
-                </div>
-                <div className="ham-dropdown__item">
-                    <Menu.Item>
-                        <a href="#about">{trans.navbar.about}</a>
-                    </Menu.Item>
-                </div>
-                <div className="ham-dropdown__item">
-                    <Menu.Item>
-                        <a href="#services">{trans.navbar.services}</a>
-                    </Menu.Item>
-                </div>
-                <div className="ham-dropdown__item">
-                    <Menu.Item>
-                        <a href="#contact">{trans.navbar.contact}</a>
-                    </Menu.Item>
-                </div>
+              <div className="ham-dropdown__item">
                 <Menu.Item>
-                    <ToggleButton lang={lang}/>
+                  <button onClick={(e) => scrollToSection(e, "#summary")}>
+                    {trans.navbar.start}
+                  </button>
                 </Menu.Item>
+              </div>
+              <div className="ham-dropdown__item">
+                <Menu.Item>
+                  <button onClick={(e) => scrollToSection(e, "#about")}>
+                    {trans.navbar.about}
+                  </button>
+                </Menu.Item>
+              </div>
+              <div className="ham-dropdown__item">
+                <Menu.Item>
+                  <button onClick={(e) => scrollToSection(e, "#services")}>
+                    {trans.navbar.services}
+                  </button>
+                </Menu.Item>
+              </div>
+              <div className="ham-dropdown__item">
+                <Menu.Item>
+                  <button onClick={(e) => scrollToSection(e, "#contact")}>
+                    {trans.navbar.contact}
+                  </button>
+                </Menu.Item>
+              </div>
+              <Menu.Item>
+                <ToggleButton lang={lang} />
+              </Menu.Item>
             </div>
           </Menu.Content>
         </Menu.Positioner>

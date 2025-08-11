@@ -52,3 +52,34 @@ export const flipCard = (delay = 0) => ({
   exit: { rotateY: 90, opacity: 0 }, 
 });
 
+export const fallingLeafAnim = {
+  initial: { opacity: 0, y: -100, x: 0, rotate: 0 },
+  animate: (i) => ({
+    opacity: 1,
+    y: 0,
+    x: [0, 15, -10, 0], 
+    rotate: [0, 10, -5, 0], 
+    transition: {
+      delay: i * 0.2,
+      duration: 1.5,
+      ease: "easeOut"
+    }
+  }),
+  exit: { opacity: 0, y: -100, transition: { duration: 0.5 } }
+};
+
+export const fallingLeafAnimReverse = {
+  initial: { opacity: 0, y: -100, x: 0, rotate: 0 },
+  animate: (i) => ({
+    opacity: 1,
+    y: 0,
+    x: [0, -15, 10, 0],
+    rotate: [0, -10, 5, 0], 
+    transition: {
+      delay: i * 0.2, 
+      duration: 1.5,
+      ease: "easeOut"
+    }
+  }),
+  exit: { opacity: 0, y: -100, transition: { duration: 0.5 } }
+};
