@@ -33,8 +33,25 @@
         "body3": "Me apasiona ayudarte a reconectar con tu bienestar, sentirte en paz con tu cuerpo y tomar decisiones que te hagan sentir fuerte, informada y feliz."
     },
 
+    "services": {
+        "top": "Explora todos",
+        "center": "Mis Servicios",
+        "bottom": "Estoy aquí para brindarte las herramientas y el apoyo necesario para que puedas alcanzar tus objetivos con éxito. Explora los servicios que ofrezco y encuentra la solución perfecta para lo que necesitas.",
+        "card_title1": "Programa de bienestar general",
+        "card_body1": "Un enfoque holístico que incluye ejercicios y recetas personalizadas para mejorar energía.",
+        "card_title2": "Asesoría nutricional",
+        "card_body2": "Sesión personalizada para revisar hábitos y crear un plan alimenticio adaptado.",
+        "card_title3": "Plan de nutrición hormonal",
+        "card_body3": "Plan para equilibrar el ciclo menstrual o problemas hormonales a través de la dieta.",
+        "format": "Precencial",
+        "weeks": "semanas",
+        "days": "días"
+    },
+
     "buttons": {
         "begin": "Comencémos",
-        "history": "Mira mi historia"
+        "history": "Mira mi historia",
+        "all": "Pata todos",
+        "business": "Para empresas"
     }
 }

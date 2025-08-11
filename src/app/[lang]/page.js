@@ -4,8 +4,9 @@ import { getTranslations } from "@/locales/translations";
 import Image from "next/image";
 import Button from "@/components/buttons/Button";
 import Scroller from "@/components/Scroller";
-import ServiceCard from "@/components/cards/ServiceCard";
+import ServiceCard from "@/components/cards/BenefitCard";
 import AnimatedSection from "@/utils/AnimatedSection";
+import Slider from "@/components/Slider";
 
 // LandingPage
 export default async function LandingPage({params}) {
@@ -13,6 +14,34 @@ export default async function LandingPage({params}) {
     // Translations
     const { lang } = await params;
     const trans = await getTranslations(lang);
+
+    // Services
+    const services = [
+       {
+        img: "/pictures/service1.jpg",
+        alt: "Programa de bienestar general",
+        title: trans.services.card_title1,
+        body: trans.services.card_body1,
+        time: `4 ${trans.services.weeks}`,
+        format: trans.services.format,
+       },
+       {
+        img: "/pictures/service2.jpg",
+        alt: "Asesoría nutricional",
+        title: trans.services.card_title2,
+        body: trans.services.card_body2,
+        time: "60 min",
+        format: `${trans.services.format}/Online`,
+       },
+       {
+        img: "/pictures/service3.jpg",
+        alt: "Plan de nutrición hormonal",
+        title: trans.services.card_title3,
+        body: trans.services.card_body3,
+        time: `30 ${trans.services.days}`,
+        format: "Online",
+       }
+    ];
 
     return (
         <div className="landing-page">
@@ -351,7 +380,12 @@ export default async function LandingPage({params}) {
 
           {/* Services */}
           <section id="services" className="services">
-
+            <div className="services__text">
+              <h3>{trans.services.top}</h3>
+              <h2>{trans.services.center}</h2>
+              <h4>{trans.services.bottom}</h4>
+            </div>
+            <Slider slides={services} />
           </section>
 
         </div>

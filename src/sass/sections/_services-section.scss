@@ -1,3 +1,7 @@
 .services {
-    
+    @include flex($gap: 30px);
+    width: 100%;
+    background: linear-gradient(to bottom, $purple-secondary 0%, $purple-dark 100%);
+    padding: 80px 50px;
+    text-align: center;
 }

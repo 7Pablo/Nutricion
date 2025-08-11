@@ -1123,6 +1123,18 @@ a:focus {
     height: 55px;
   }
 }
+.services {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: linear-gradient(to bottom, #6E61D4 0%, #39326E 100%);
+  padding: 80px 50px;
+  text-align: center;
+}
+
 .navbar {
   display: flex;
   flex-direction: column;
@@ -1259,7 +1271,12 @@ a:focus {
     display: none;
   }
 }
-.service-card {
+.slider {
+  height: 300px;
+  width: 100%;
+}
+
+.benefit-card {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -1273,7 +1290,7 @@ a:focus {
   border-radius: 20px;
   padding: 30px 32px;
 }
-.service-card__text {
+.benefit-card__text {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -1281,7 +1298,7 @@ a:focus {
   justify-content: center;
   text-align: center;
 }
-.service-card__text h3 {
+.benefit-card__text h3 {
   font-family: "Raleway", sans-serif;
   font-size: 20px;
   font-weight: 600;
@@ -1289,7 +1306,7 @@ a:focus {
   line-height: 30px;
   line-height: 20px;
 }
-.service-card__text p {
+.benefit-card__text p {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 400;

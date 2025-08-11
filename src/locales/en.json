@@ -33,6 +33,22 @@
         "body3": "I am passionate about helping you reconnect with your well-being, feel at peace with your body, and make decisions that make you feel strong, informed, and happy."
     },
 
+    "services": {
+        "top": "Explore All",
+        "center": "My Services",
+        "bottom": "I’m here to provide you with the tools and support you need to successfully reach your goals. Explore the services I offer and find the perfect solution for your needs.",
+        "card_title1": "General Wellness Program",
+        "card_body1": "A holistic approach that includes personalized exercises and recipes to boost your energy.",
+        "card_title2": "Nutritional Counseling",
+        "card_body2": "A personalized session to review your habits and create a tailored meal plan.",
+        "card_title3": "Hormonal Nutrition Plan",
+        "card_body3": "A plan to balance the menstrual cycle or address hormonal issues through diet.",
+        "format": "In-person",
+        "weeks": "weeks",
+        "days": "days"
+    },
+
+
     "buttons": {
         "begin": "Let's get started",
         "history": "See my story"
