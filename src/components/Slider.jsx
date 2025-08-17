@@ -11,10 +11,14 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 export default function Slider({ slides }) {
     return (
         <div className='slider'>
+            <div className="slider__button--prev">
+                <ChevronLeft size={50} />
+            </div>
             <Swiper
                 modules={[Autoplay, Navigation, Pagination]}
-                spaceBetween={10} 
-                slidesPerView={1}
+                spaceBetween={3} 
+                slidesPerView={3}
+                centeredSlides={true}
                 loop={true}
                 autoplay={{
                     delay: 8000, 
@@ -28,22 +32,21 @@ export default function Slider({ slides }) {
             >
             {slides.map((slide, index) => (
                 <SwiperSlide key={index}>
-                    <ServiceCard
+                    <div className="slider__slide-inner">
+                        <ServiceCard
                         img={slide.img}
                         alt={slide.alt}
                         title={slide.title}
                         body={slide.body}
                         time={slide.time}
                         format={slide.format}
-                    />
+                        />
+                    </div>
                 </SwiperSlide>
             ))}
             </Swiper>
-            <div className="slider__button--prev">
-                <ChevronLeft size={32} />
-            </div>
             <div className="slider__button--next">
-                <ChevronRight size={32} /> 
+                <ChevronRight size={50} /> 
             </div>
         </div>
     );

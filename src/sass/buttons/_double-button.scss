@@ -1,0 +1,46 @@
+.double-button {
+    @include flex($direction: row, $gap:30px);
+    
+    &__button {
+        position: relative; 
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.25);
+        min-width: 150px;
+        padding: 8px 24px; 
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        p {
+            @include body-font($size: 20px, $weight: 500, $color: #fff);
+            line-height: 24px;
+        }
+
+        &:hover {
+            transform: scale(0.95); 
+        }
+
+        &:active {
+            transform: scale(0.90); 
+        }
+
+        &.active {
+            background-color: rgba(255, 255, 255, 1);
+            
+            p {
+                color: $gray;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: -5px;
+                left: -5px;
+                right: -5px;
+                bottom: -5px;
+                border-radius: 14px; 
+                border: 2.5px solid white;
+            }
+        }
+    }
+}

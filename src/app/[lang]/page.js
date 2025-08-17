@@ -7,6 +7,7 @@ import Scroller from "@/components/Scroller";
 import ServiceCard from "@/components/cards/BenefitCard";
 import AnimatedSection from "@/utils/AnimatedSection";
 import Slider from "@/components/Slider";
+import DoubleButton from "@/components/buttons/DoubleButton";
 
 // LandingPage
 export default async function LandingPage({params}) {
@@ -32,6 +33,22 @@ export default async function LandingPage({params}) {
         body: trans.services.card_body2,
         time: "60 min",
         format: `${trans.services.format}/Online`,
+       },
+       {
+        img: "/pictures/service3.jpg",
+        alt: "Plan de nutrición hormonal",
+        title: trans.services.card_title3,
+        body: trans.services.card_body3,
+        time: `30 ${trans.services.days}`,
+        format: "Online",
+       },
+       {
+        img: "/pictures/service1.jpg",
+        alt: "Programa de bienestar general",
+        title: trans.services.card_title1,
+        body: trans.services.card_body1,
+        time: `4 ${trans.services.weeks}`,
+        format: trans.services.format,
        },
        {
         img: "/pictures/service3.jpg",
@@ -385,6 +402,7 @@ export default async function LandingPage({params}) {
               <h2>{trans.services.center}</h2>
               <h4>{trans.services.bottom}</h4>
             </div>
+            <DoubleButton trans={trans} />
             <Slider slides={services} />
           </section>
 

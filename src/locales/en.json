@@ -51,6 +51,8 @@
 
     "buttons": {
         "begin": "Let's get started",
-        "history": "See my story"
+        "history": "See my story",
+        "all": "For everyone",
+        "business": "For businesses"
     }
 }
