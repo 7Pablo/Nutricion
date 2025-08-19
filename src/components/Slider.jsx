@@ -7,8 +7,17 @@ import 'swiper/css/pagination';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import ServiceCard from './cards/ServiceCard';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useEffect, useRef } from 'react';
 
 export default function Slider({ slides }) {
+    const swiperRef = useRef(null);
+
+    useEffect(() => {
+        if (swiperRef.current) {
+            swiperRef.current.slideToLoop(0, 0); 
+        }
+    }, [slides]);
+
     return (
         <div className='slider'>
             <div className="slider__button--prev">
@@ -29,6 +38,7 @@ export default function Slider({ slides }) {
                     prevEl: '.slider__button--prev',  
                 }}
                 pagination={{ clickable: true }}
+                onSwiper={(swiper) => (swiperRef.current = swiper)}
             >
             {slides.map((slide, index) => (
                 <SwiperSlide key={index}>

@@ -368,7 +368,7 @@ a:focus {
   background-size: 1400px 500px;
   will-change: background-position;
   transition: background-position 0.05s ease-out;
-  filter: grayscale(100%) contrast(90%);
+  mix-blend-mode: luminosity;
 }
 .start__scroller--mouse, .start__scroller--arrow {
   cursor: pointer;
@@ -1126,13 +1126,22 @@ a:focus {
 .services {
   display: flex;
   flex-direction: column;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, rgba(110, 97, 212, 0.85) 25%, rgba(57, 50, 110, 0.85) 75%);
+  padding: 80px 50px 30px;
+  width: 100%;
+  position: relative;
+}
+.services__content {
+  display: flex;
+  flex-direction: column;
   gap: 40px;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  background: linear-gradient(to bottom, rgba(110, 97, 212, 0.85) 25%, rgba(57, 50, 110, 0.85) 75%);
-  padding: 80px 50px 30px;
   text-align: center;
+  z-index: 2;
 }
 .services__text {
   display: flex;
@@ -1168,6 +1177,27 @@ a:focus {
   line-height: 30px;
   line-height: 24px;
   margin: 15px 0 5px;
+}
+.services__decoration--right, .services__decoration--left {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: luminosity;
+  z-index: 1;
+}
+.services__decoration--left {
+  left: 0px;
+  bottom: 0;
+}
+.services__decoration--left img {
+  width: 300px;
+}
+.services__decoration--right {
+  right: 0;
+  top: 0;
+}
+.services__decoration--right img {
+  width: 250px;
 }
 
 .navbar {

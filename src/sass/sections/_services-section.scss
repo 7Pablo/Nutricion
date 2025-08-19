@@ -1,9 +1,15 @@
 .services {
-    @include flex($gap: 40px);
-    width: 100%;
+    @include flex();
     background: linear-gradient(to bottom, rgba($purple-secondary, 0.85) 25%, rgba($purple-dark, 0.85) 75%);
     padding: 80px 50px 30px;
-    text-align: center;
+    width: 100%;
+    position: relative;
+    
+    &__content {
+        @include flex($gap: 40px);
+        text-align: center;
+        z-index: 2;
+    }
 
     &__text {
         @include flex($gap: 5px);
@@ -25,6 +31,34 @@
             @include body-font($size: 20px, $color: #ffff);
             line-height: 24px;
             margin: 15px 0 5px;
+        }
+    }
+
+    &__decoration {
+        &--right, &--left {
+            position: absolute;
+            pointer-events: none;
+            opacity: 0.5; 
+            mix-blend-mode: luminosity;
+            z-index: 1;
+        }
+
+        &--left {
+            left: 0px;
+            bottom: 0;
+
+            img {
+                width: 300px;
+            }
+        }
+
+        &--right {
+            right: 0;
+            top: 0;
+
+            img {
+                width: 250px;
+            }
         }
     }
 }

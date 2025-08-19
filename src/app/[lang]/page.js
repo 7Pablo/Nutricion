@@ -6,8 +6,8 @@ import Button from "@/components/buttons/Button";
 import Scroller from "@/components/Scroller";
 import ServiceCard from "@/components/cards/BenefitCard";
 import AnimatedSection from "@/utils/AnimatedSection";
-import Slider from "@/components/Slider";
-import DoubleButton from "@/components/buttons/DoubleButton";
+
+import ServicesSection from "@/components/ServicesSection";
 
 // LandingPage
 export default async function LandingPage({params}) {
@@ -17,7 +17,7 @@ export default async function LandingPage({params}) {
     const trans = await getTranslations(lang);
 
     // Services
-    const services = [
+    const all = [
        {
         img: "/pictures/service1.jpg",
         alt: "Programa de bienestar general",
@@ -57,6 +57,49 @@ export default async function LandingPage({params}) {
         body: trans.services.card_body3,
         time: `30 ${trans.services.days}`,
         format: "Online",
+       }
+    ];
+
+    const business = [
+       {
+        img: "/pictures/service1.jpg",
+        alt: "Programa de bienestar general",
+        title: trans.services.card_title1,
+        body: trans.services.card_body1,
+        time: `4 ${trans.services.weeks}`,
+        format: trans.services.format,
+       },
+       {
+        img: "/pictures/service1.jpg",
+        alt: "Programa de bienestar general",
+        title: trans.services.card_title1,
+        body: trans.services.card_body1,
+        time: `4 ${trans.services.weeks}`,
+        format: trans.services.format,
+       },
+       {
+        img: "/pictures/service1.jpg",
+        alt: "Programa de bienestar general",
+        title: trans.services.card_title1,
+        body: trans.services.card_body1,
+        time: `4 ${trans.services.weeks}`,
+        format: trans.services.format,
+       },
+       {
+        img: "/pictures/service1.jpg",
+        alt: "Programa de bienestar general",
+        title: trans.services.card_title1,
+        body: trans.services.card_body1,
+        time: `4 ${trans.services.weeks}`,
+        format: trans.services.format,
+       },
+       {
+        img: "/pictures/service1.jpg",
+        alt: "Programa de bienestar general",
+        title: trans.services.card_title1,
+        body: trans.services.card_body1,
+        time: `4 ${trans.services.weeks}`,
+        format: trans.services.format,
        }
     ];
 
@@ -396,15 +439,7 @@ export default async function LandingPage({params}) {
           </section>
 
           {/* Services */}
-          <section id="services" className="services">
-            <div className="services__text">
-              <h3>{trans.services.top}</h3>
-              <h2>{trans.services.center}</h2>
-              <h4>{trans.services.bottom}</h4>
-            </div>
-            <DoubleButton trans={trans} />
-            <Slider slides={services} />
-          </section>
+          <ServicesSection trans={trans} all={all} business={business} />
 
         </div>
     );

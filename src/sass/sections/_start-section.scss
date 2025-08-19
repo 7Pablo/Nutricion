@@ -244,7 +244,7 @@
             background-size: 1400px 500px;
             will-change: background-position;
             transition: background-position 0.05s ease-out;
-            filter: grayscale(100%) contrast(90%);
+            mix-blend-mode: luminosity;
         }
 
         &--mouse, &--arrow {
