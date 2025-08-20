@@ -1130,8 +1130,12 @@ a:focus {
   align-items: center;
   justify-content: center;
   background: linear-gradient(to bottom, rgba(110, 97, 212, 0.85) 25%, rgba(57, 50, 110, 0.85) 75%);
-  padding: 80px 50px 30px;
   width: 100%;
+  overflow-y: clip;
+}
+.services__wrapper {
+  max-width: 1440px;
+  padding: 80px 50px 30px;
   position: relative;
 }
 .services__content {
@@ -1184,20 +1188,28 @@ a:focus {
   opacity: 0.5;
   mix-blend-mode: luminosity;
   z-index: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .services__decoration--left {
-  left: 0px;
-  bottom: 0;
+  left: -150px;
+  bottom: -100px;
 }
 .services__decoration--left img {
   width: 300px;
 }
 .services__decoration--right {
-  right: 0;
+  right: -150px;
   top: 0;
 }
 .services__decoration--right img {
   width: 250px;
+}
+
+.testimonials {
+  height: 500px;
 }
 
 .navbar {
@@ -1438,6 +1450,10 @@ a:focus {
   position: relative;
   width: 100%;
   height: 50%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .service-card__text {
   display: flex;
@@ -1506,6 +1522,10 @@ a:focus {
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.2s ease, color 0.2s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .button--primary::after, .button--secondary::after {
   content: "";
@@ -1556,6 +1576,10 @@ a:focus {
   color: #898989;
   line-height: 22px;
   animation: slideFadeInRight 0.6s ease-out forwards;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .toggle-button .chakra-switch__control {
   background-color: #6D64AF;
@@ -1577,6 +1601,10 @@ a:focus {
 }
 .ham-dropdown {
   display: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .ham-dropdown__button {
   width: 40px;
@@ -1650,6 +1678,10 @@ a:focus {
   gap: 30px;
   align-items: center;
   justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .double-button__button {
   position: relative;

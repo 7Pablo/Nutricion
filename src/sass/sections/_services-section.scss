@@ -1,9 +1,14 @@
 .services {
     @include flex();
     background: linear-gradient(to bottom, rgba($purple-secondary, 0.85) 25%, rgba($purple-dark, 0.85) 75%);
-    padding: 80px 50px 30px;
     width: 100%;
-    position: relative;
+    overflow-y: clip;
+
+    &__wrapper {
+        max-width: 1440px;
+        padding: 80px 50px 30px;
+        position: relative;
+    }
     
     &__content {
         @include flex($gap: 40px);
@@ -41,11 +46,16 @@
             opacity: 0.5; 
             mix-blend-mode: luminosity;
             z-index: 1;
+
+            -webkit-user-select: none;
+            -moz-user-select: none; 
+            -ms-user-select: none;    
+            user-select: none;  
         }
 
         &--left {
-            left: 0px;
-            bottom: 0;
+            left: -150px;
+            bottom: -100px;
 
             img {
                 width: 300px;
@@ -53,7 +63,7 @@
         }
 
         &--right {
-            right: 0;
+            right: -150px;
             top: 0;
 
             img {

@@ -6,7 +6,6 @@ import Button from "@/components/buttons/Button";
 import Scroller from "@/components/Scroller";
 import ServiceCard from "@/components/cards/BenefitCard";
 import AnimatedSection from "@/utils/AnimatedSection";
-
 import ServicesSection from "@/components/ServicesSection";
 
 // LandingPage
@@ -440,6 +439,11 @@ export default async function LandingPage({params}) {
 
           {/* Services */}
           <ServicesSection trans={trans} all={all} business={business} />
+
+          {/* Testimonials */}
+          <section id="testimonials" className="testimonials">
+
+          </section>
 
         </div>
     );

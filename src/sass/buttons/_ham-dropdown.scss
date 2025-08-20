@@ -1,5 +1,9 @@
 .ham-dropdown {
     display: none;
+    -webkit-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none;    
+    user-select: none;  
 
     &__button {
         width: 40px;

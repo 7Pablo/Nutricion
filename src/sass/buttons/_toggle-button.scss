@@ -2,6 +2,11 @@
     @include flex($direction: row, $gap: 5px);
     @include title-font($size: 12px, $weight: 500, $color: $gray-light);
     animation: slideFadeInRight 0.6s ease-out forwards;
+
+    -webkit-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none;    
+    user-select: none;  
     
     .chakra-switch__control {
         background-color: $purple-primary;

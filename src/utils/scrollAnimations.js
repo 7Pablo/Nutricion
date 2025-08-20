@@ -52,6 +52,22 @@ export const flipCard = (delay = 0) => ({
   exit: { rotateY: 90, opacity: 0 }, 
 });
 
+export const flipCardVertical = (delay = 0) => ({
+  initial: { rotateX: 90, opacity: 0 },  
+  animate: {
+    rotateX: 0,
+    opacity: 1,
+    transition: {
+      delay,
+      type: 'spring',
+      stiffness: 150,
+      damping: 12,
+      mass: 1,
+    },
+  },
+  exit: { rotateX: 90, opacity: 0 }, 
+});
+
 export const fallingLeafAnim = {
   initial: { opacity: 0, y: -100, x: 0, rotate: 0 },
   animate: (i) => ({
@@ -83,3 +99,20 @@ export const fallingLeafAnimReverse = {
   }),
   exit: { opacity: 0, y: -100, transition: { duration: 0.5 } }
 };
+
+export const bouncyRise = (delay = 0) => ({
+  initial: { opacity: 0, y: 50, scale: 0.95 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    scale: 1, 
+    transition: {
+      delay,
+      type: 'spring',
+      stiffness: 120,
+      damping: 12,
+      mass: 1,
+    },
+  },
+  exit: { opacity: 0, y: 50, scale: 0.95 },
+});
