@@ -1,5 +1,5 @@
 .double-button {
-    @include flex($direction: row, $gap:30px);
+    @include flex($direction: row, $gap: 30px);
     -webkit-user-select: none;
     -moz-user-select: none; 
     -ms-user-select: none;    
@@ -47,4 +47,19 @@
             }
         }
     }
+}
+
+// Responsive small
+@include responsive(small) {
+     .double-button {
+        gap: 20px;
+
+        &__button {
+            padding: 8px 20px;
+
+            p {
+                font-size: 16px;
+            }
+        }
+     }   
 }

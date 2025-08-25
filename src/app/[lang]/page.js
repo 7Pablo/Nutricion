@@ -7,6 +7,7 @@ import Scroller from "@/components/Scroller";
 import ServiceCard from "@/components/cards/BenefitCard";
 import AnimatedSection from "@/utils/AnimatedSection";
 import ServicesSection from "@/components/ServicesSection";
+import TestimonialTicker from "@/components/TestimonialTicker";
 
 // LandingPage
 export default async function LandingPage({params}) {
@@ -100,6 +101,33 @@ export default async function LandingPage({params}) {
         time: `4 ${trans.services.weeks}`,
         format: trans.services.format,
        }
+    ];
+
+    const testimonials = [
+      {
+        img: "/pictures/testimonial1.jpeg",
+        alt: "Testimonio Laura Méndez",
+        name: "Laura Méndez",
+        time: `${trans.testimonials.patient1} 2023`,
+        body: `${trans.testimonials.testimonial1}`,
+        position: "50% 50%"
+      },
+      {
+        img: "/pictures/testimonial2.jpg",
+        alt: "Testimonio Carlos Ríos",
+        name: "Carlos Ríos",
+        time: `${trans.testimonials.patient2}`,
+        body: `${trans.testimonials.testimonial2}`,
+        position: "50% 50%"
+      },
+      {
+        img: "/pictures/testimonial3.webp",
+        alt: "Testimonio Valentina Ortiz",
+        name: "Valentina Ortiz",
+        time: `${trans.testimonials.patient1} 2020`,
+        body: `${trans.testimonials.testimonial3}`,
+        position: "50% 50%"
+      }
     ];
 
     return (
@@ -442,7 +470,16 @@ export default async function LandingPage({params}) {
 
           {/* Testimonials */}
           <section id="testimonials" className="testimonials">
-
+            <div className="testimonials__content">
+              <AnimatedSection animation="fadeInUp" delay={0.2}>
+                <div className="testimonials__text">
+                  <h3>{trans.testimonials.top}</h3>
+                  <h2>{trans.testimonials.center}</h2>
+                  <p>{trans.testimonials.bottom}</p>
+                </div>
+              </AnimatedSection>
+              <TestimonialTicker testimonials={testimonials} />
+            </div>
           </section>
 
         </div>

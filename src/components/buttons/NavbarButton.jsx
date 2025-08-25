@@ -1,4 +1,4 @@
-// NvbarButton.jsx (Client component)
+// NavbarButton.jsx (Client component)
 'use client';
 
 import Image from "next/image";

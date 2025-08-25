@@ -4,6 +4,7 @@
         "start": "Start",
         "about": "About Me",
         "services": "Services",
+        "testimonials": "Testimonials",
         "contact": "Contact"
     },
     
@@ -48,6 +49,16 @@
         "days": "days"
     },
 
+    "testimonials": {
+        "top": "Discover their experiences",
+        "center": "Real Testimonials",
+        "bottom": "Your well-being is my priority. Each testimonial reflects the commitment, empathy, and dedication I put into every process. Discover how I’ve supported others in transforming their health with a respectful, human, and sustainable approach.",
+        "patient1": "Patient in",
+        "patient2": "Current patient",
+        "testimonial1": "In just a few weeks I noticed real changes in my energy, digestion, and mood. I never imagined that small adjustments could make such a big difference.",
+        "testimonial2": "Thanks to her guidance, I finally understood what it means to eat well without obsessing. I learned to enjoy food without guilt and to listen to what my body truly needs.",
+        "testimonial3": "More than a nutritionist, I felt like I had someone who really listened to me. She supported me with empathy throughout the entire process, which made achieving my goals much easier."
+    },
 
     "buttons": {
         "begin": "Let's get started",

@@ -4,6 +4,7 @@
         "start": "Inicio",
         "about": "Sobre mí",
         "services": "Servicios",
+        "testimonials": "Testimonios",
         "contact": "Contacto"
     },
 
@@ -46,6 +47,17 @@
         "format": "Precencial",
         "weeks": "semanas",
         "days": "días"
+    },
+
+    "testimonials": {
+        "top": "Conoce sus experiencias",
+        "center": "Testimonios Reales",
+        "bottom": "Tu bienestar es mi prioridad. Cada testimonio refleja el compromiso, la empatía y la dedicación que pongo en cada proceso. Descubre cómo he acompañado a otras personas a transformar su salud desde un enfoque respetuoso, humano y sostenible.",
+        "patient1": "Paciente en",
+        "patient2": "Paciente actual",
+        "testimonial1": "En solo unas semanas noté cambios reales en mi energía, mi digestión y mi estado de ánimo. Nunca imaginé que pequeños ajustes pudieran hacer tanta diferencia.",
+        "testimonial2": "Gracias a su guía, por fin entendí qué significa comer bien sin obsesionarme. Aprendí a disfrutar la comida sin culpa y a escuchar lo que mi cuerpo realmente necesita.",
+        "testimonial3": "Más que una nutricionista, sentí que tenía a alguien que realmente me escuchaba. Me acompañó con empatía en todo el proceso y eso hizo que lograr mis objetivos fuera mucho más fácil."
     },
 
     "buttons": {

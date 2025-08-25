@@ -4,13 +4,36 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import ServiceCard from './cards/ServiceCard';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function Slider({ slides }) {
     const swiperRef = useRef(null);
+    const [slidesPerView, setSlidesPerView] = useState(3);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 1200) {
+                setSlidesPerView(1);
+            } else {
+                setSlidesPerView(3);
+            }
+        };
+
+        handleResize(); 
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    useEffect(() => {
+        if (swiperRef.current) {
+            swiperRef.current.params.slidesPerView = slidesPerView;
+            swiperRef.current.update();
+        }
+    }, [slidesPerView]);
 
     useEffect(() => {
         if (swiperRef.current) {
@@ -25,9 +48,9 @@ export default function Slider({ slides }) {
             </div>
             <Swiper
                 modules={[Autoplay, Navigation, Pagination]}
-                spaceBetween={3} 
-                slidesPerView={3}
-                centeredSlides={true}
+                slidesPerView={slidesPerView}
+                spaceBetween={10}
+                centeredSlides={slidesPerView > 1}
                 loop={true}
                 autoplay={{
                     delay: 8000, 

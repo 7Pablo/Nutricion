@@ -13,10 +13,6 @@
         &.is-open {
             transform: rotate(180deg);
         }
-
-        &:focus {
-            outline: none;
-        }
     }
 
     &__content {
@@ -49,6 +45,20 @@
         &:hover {
             transform: translateX(6px);
         }
+    }
+
+    &__button,
+    &__content button,
+    &__content .chakra-menu__item {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+    &__button:focus,
+    &__content button:focus,
+    &__content .chakra-menu__item:focus {
+        outline: none !important;
+        box-shadow: none !important;
     }
 }
 
