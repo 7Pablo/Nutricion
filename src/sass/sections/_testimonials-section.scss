@@ -2,11 +2,12 @@
     @include flex();
     width: 100%;
     overflow: clip;
+    position: relative;
 
     &__content {
         @include flex($gap: 80px);
         position: relative;
-        padding: 80px 50px;
+        padding: 80px 0px 200px;
         text-align: center;
         z-index: 2;
     }
@@ -15,6 +16,7 @@
         @include flex($gap: 5px);
         width: 100%;
         max-width: 750px;
+        padding: 0 50px;
 
         h3 {
             @include body-font($size: 20px, $weight: 300, $color: $gray-lighter);
@@ -31,6 +33,88 @@
             @include body-font($size: 20px, $color: $gray);
             line-height: 24px;
             margin: 15px 0 5px;
+        }
+    }
+
+    &__ticker {
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    &__decoration {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+        z-index: 1;
+        pointer-events: none;
+
+        img {
+            height: 700px;
+            width: 1700px; 
+            max-width: none;
+            opacity: 0.75;
+        }
+    }
+}
+
+// Responsive medium
+@include responsive(medium) {
+    .testimonials {
+        &__content {
+            padding: 60px 0px 100px;
+        }
+
+        &__text {
+            padding: 0 40px;
+        }
+    }
+}
+
+// Responsive smedium
+@include responsive(smedium) {
+    .testimonials {
+        &__content {
+            gap: 50px
+        }
+        &__text {
+            h3 {
+                font-size: 18px;
+                line-height: 20px;
+            }
+
+            h2 {
+                font-size: 40px;
+                line-height: 44px;
+            }
+
+            p {
+                font-size: 18px;
+                line-height: 22px;
+            }
+        }
+    }
+}
+
+// Responsive small
+@include responsive(small) {
+    .testimonials {
+        &__text {
+            gap: 10px;
+            padding: 0 30px;
+            
+            h3 {
+                max-width: 300px;
+            }
+
+            h2 {
+                font-size: 30px;
+                line-height: 34px;
+            }
+
+            h4 {
+                max-width: 400px;
+            }
         }
     }
 }

@@ -116,3 +116,5 @@ export const bouncyRise = (delay = 0) => ({
   },
   exit: { opacity: 0, y: 50, scale: 0.95 },
 });
+
+

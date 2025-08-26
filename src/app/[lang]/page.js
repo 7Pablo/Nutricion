@@ -470,6 +470,14 @@ export default async function LandingPage({params}) {
 
           {/* Testimonials */}
           <section id="testimonials" className="testimonials">
+            <div className="testimonials__decoration">
+              <Image
+                src="/images/purple-balls-big.png"
+                alt="Fondo de formas moradas"
+                height={600}
+                width={600}
+              />
+            </div>
             <div className="testimonials__content">
               <AnimatedSection animation="fadeInUp" delay={0.2}>
                 <div className="testimonials__text">
@@ -478,7 +486,11 @@ export default async function LandingPage({params}) {
                   <p>{trans.testimonials.bottom}</p>
                 </div>
               </AnimatedSection>
-              <TestimonialTicker testimonials={testimonials} />
+              <AnimatedSection animation="tickerFadeInUp" delay={0.2}>
+                <div className="testimonials__ticker">
+                  <TestimonialTicker testimonials={testimonials} />
+                </div>
+              </AnimatedSection>
             </div>
           </section>
 

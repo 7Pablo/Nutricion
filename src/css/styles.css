@@ -1265,6 +1265,7 @@ a:focus {
   justify-content: center;
   width: 100%;
   overflow: clip;
+  position: relative;
 }
 .testimonials__content {
   display: flex;
@@ -1273,7 +1274,7 @@ a:focus {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 80px 50px;
+  padding: 80px 0px 200px;
   text-align: center;
   z-index: 2;
 }
@@ -1285,6 +1286,7 @@ a:focus {
   justify-content: center;
   width: 100%;
   max-width: 750px;
+  padding: 0 50px;
 }
 .testimonials__text h3 {
   font-family: "Poppins", sans-serif;
@@ -1312,7 +1314,66 @@ a:focus {
   line-height: 24px;
   margin: 15px 0 5px;
 }
+.testimonials__ticker {
+  width: 100vw;
+  overflow: hidden;
+}
+.testimonials__decoration {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  z-index: 1;
+  pointer-events: none;
+}
+.testimonials__decoration img {
+  height: 700px;
+  width: 1700px;
+  max-width: none;
+  opacity: 0.75;
+}
 
+@media (max-width: 1200px) {
+  .testimonials__content {
+    padding: 60px 0px 100px;
+  }
+  .testimonials__text {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 800px) {
+  .testimonials__content {
+    gap: 50px;
+  }
+  .testimonials__text h3 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .testimonials__text h2 {
+    font-size: 40px;
+    line-height: 44px;
+  }
+  .testimonials__text p {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 550px) {
+  .testimonials__text {
+    gap: 10px;
+    padding: 0 30px;
+  }
+  .testimonials__text h3 {
+    max-width: 300px;
+  }
+  .testimonials__text h2 {
+    font-size: 30px;
+    line-height: 34px;
+  }
+  .testimonials__text h4 {
+    max-width: 400px;
+  }
+}
 .navbar {
   display: flex;
   flex-direction: column;
@@ -1542,6 +1603,23 @@ a:focus {
     display: none;
   }
 }
+.ticker {
+  width: 100vw;
+  overflow: hidden;
+}
+.ticker .rfm-child {
+  display: flex;
+  margin: 30px;
+}
+.ticker .testimonial-card {
+  flex: 0 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.ticker .testimonial-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
 .benefit-card {
   display: flex;
   flex-direction: column;
@@ -1664,6 +1742,8 @@ a:focus {
   width: 100%;
   max-width: 550px;
   border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 70px 0;
 }
 .testimonial-card__top {
   display: flex;
@@ -1724,6 +1804,16 @@ a:focus {
   text-align: left;
 }
 
+@media (max-width: 800px) {
+  .testimonial-card {
+    max-width: 325px;
+    min-height: 310px;
+  }
+  .testimonial-card__top--text h2 {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
 .button--primary, .button--secondary {
   font-family: "Poppins", sans-serif;
   font-size: 18px;

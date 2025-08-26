@@ -1,21 +1,19 @@
 .ticker {
+  width: 100vw;
   overflow: hidden;
-  width: 100%;
-  display: flex;
-
-  .ticker-track {
+  
+  .rfm-child {
     display: flex;
-    animation: ticker 30s linear infinite;
+    margin: 30px;
+  }
 
-    .testimonial-card {
-      margin-right: 40px;
-      flex: 0 0 auto;
+  .testimonial-card {
+    flex: 0 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
   }
-}
-
-// Animation
-@keyframes ticker {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } 
 }
