@@ -1,0 +1,8 @@
+.social-button {
+    @include flex($direction: row, $gap: 15px);
+    transition: transform 0.2s ease, color 0.3s ease;
+
+    &:hover {
+        transform: translateX(8px); 
+    }
+}

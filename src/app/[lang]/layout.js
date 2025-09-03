@@ -1,6 +1,7 @@
 // app/[lang]/layout.js (Server component)
 
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/sections/Navbar";
+import Footer from "@/components/sections/Footer";
 
 export default async function LangLayout(props) {
   const params = await props.params; 
@@ -12,7 +13,7 @@ export default async function LangLayout(props) {
         <main>
           {props.children}
         </main>
-      {/* <Footer lang={lang}/> */}
+      <Footer lang={lang}/>
     </div>
   );
 }

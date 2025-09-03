@@ -1,7 +1,7 @@
 .testimonials {
     @include flex();
     width: 100%;
-    overflow: clip;
+    overflow: hidden;
     position: relative;
 
     &__content {
@@ -53,7 +53,7 @@
             height: 700px;
             width: 1700px; 
             max-width: none;
-            opacity: 0.75;
+            opacity: 0.8;
         }
     }
 }
@@ -93,6 +93,15 @@
                 line-height: 22px;
             }
         }
+
+        &__decoration {
+            transform: translate(-50%, -35%);
+
+            img {
+                height: 600px;
+                width: 1400px; 
+            }
+        }
     }
 }
 
@@ -114,6 +123,15 @@
 
             h4 {
                 max-width: 400px;
+            }
+        }
+
+        &__decoration {
+            transform: translate(-50%, -30%);
+
+            img {
+                height: 600px;
+                width: 1300px; 
             }
         }
     }

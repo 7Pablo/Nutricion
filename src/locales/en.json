@@ -60,6 +60,14 @@
         "testimonial3": "More than a nutritionist, I felt like I had someone who really listened to me. She supported me with empathy throughout the entire process, which made achieving my goals much easier."
     },
 
+    "footer": {
+        "top": "Because your well-being deserves genuine attention, I support you in nurturing your life with real and sustainable habits.",
+        "contact": "Contact",
+        "links": "Quick Links",
+        "social": "Our Social Media",
+        "copyright": "All rights reserved."
+    },
+
     "buttons": {
         "begin": "Let's get started",
         "history": "See my story",

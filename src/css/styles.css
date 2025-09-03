@@ -853,6 +853,7 @@ a:focus {
   align-items: center;
   justify-content: center;
   padding: 80px 50px;
+  overflow-x: hidden;
 }
 .about__top {
   display: flex;
@@ -1264,7 +1265,7 @@ a:focus {
   align-items: center;
   justify-content: center;
   width: 100%;
-  overflow: clip;
+  overflow: hidden;
   position: relative;
 }
 .testimonials__content {
@@ -1330,7 +1331,7 @@ a:focus {
   height: 700px;
   width: 1700px;
   max-width: none;
-  opacity: 0.75;
+  opacity: 0.8;
 }
 
 @media (max-width: 1200px) {
@@ -1357,6 +1358,13 @@ a:focus {
     font-size: 18px;
     line-height: 22px;
   }
+  .testimonials__decoration {
+    transform: translate(-50%, -35%);
+  }
+  .testimonials__decoration img {
+    height: 600px;
+    width: 1400px;
+  }
 }
 @media (max-width: 550px) {
   .testimonials__text {
@@ -1372,6 +1380,13 @@ a:focus {
   }
   .testimonials__text h4 {
     max-width: 400px;
+  }
+  .testimonials__decoration {
+    transform: translate(-50%, -30%);
+  }
+  .testimonials__decoration img {
+    height: 600px;
+    width: 1300px;
   }
 }
 .navbar {
@@ -1618,6 +1633,184 @@ a:focus {
 .ticker .testimonial-card:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, rgba(110, 97, 212, 0.8) 0%, rgba(162, 103, 231, 0.8) 100%);
+  width: 100%;
+}
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  max-width: 1440px;
+  width: 100%;
+  padding: 60px 50px 40px;
+}
+.footer__top {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  align-items: center;
+  justify-content: center;
+}
+.footer__top--logo {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.footer__top--logo img {
+  height: 82px;
+  width: 82px;
+  transition: transform 0.2s ease-out;
+}
+.footer__top--logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: start;
+  justify-content: center;
+}
+.footer__top--logo-text h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 40px;
+  line-height: 30px;
+}
+.footer__top--logo-text h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 40px;
+  line-height: 30px;
+}
+.footer__top p {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 30px;
+  line-height: 24px;
+  max-width: 650px;
+  text-align: center;
+}
+.footer hr {
+  width: 100%;
+  border: 1px solid #fff;
+}
+.footer__bottom {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: start;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 950px;
+}
+.footer__bottom h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 30px;
+  letter-spacing: 3px;
+}
+.footer__bottom p {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 28px;
+  line-height: 22px;
+  max-width: 250px;
+}
+.footer__bottom--contact {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: start;
+  justify-content: center;
+}
+.footer__bottom--contact-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: start;
+  justify-content: center;
+}
+.footer__bottom--contact-item {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+.footer__bottom--links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: start;
+  justify-content: center;
+}
+.footer__bottom--links-line {
+  background-color: white;
+  width: 4px;
+  height: 30px;
+}
+.footer__bottom--links-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: start;
+  justify-content: center;
+}
+.footer__bottom--links-item {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+.footer__bottom--links-item:hover {
+  transform: translateX(5px);
+}
+.footer__bottom--social {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: start;
+  justify-content: center;
+}
+.footer__bottom--social-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: start;
+  justify-content: center;
+}
+.footer__copyright {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 26px;
+  line-height: 20px;
+  text-align: center;
+  padding-top: 8px;
 }
 
 .benefit-card {
@@ -2049,6 +2242,18 @@ a:focus {
     font-size: 16px;
   }
 }
+.social-button {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+.social-button:hover {
+  transform: translateX(8px);
+}
+
 body {
   background-color: #F8F8F8;
 }/*# sourceMappingURL=styles.css.map */

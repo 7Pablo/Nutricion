@@ -1,6 +1,7 @@
 .about {
     @include flex($gap: 60px);
     padding: 80px 50px;
+    overflow-x: hidden;
 
     &__top {
         @include flex($direction: row, $justify: space-between);

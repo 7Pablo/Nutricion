@@ -60,6 +60,14 @@
         "testimonial3": "Más que una nutricionista, sentí que tenía a alguien que realmente me escuchaba. Me acompañó con empatía en todo el proceso y eso hizo que lograr mis objetivos fuera mucho más fácil."
     },
 
+    "footer": {
+        "top": "Porque tu bienestar merece atención auténtica, te acompaño a nutrir tu vida con hábitos reales y sostenibles.",
+        "contact": "Contacto",
+        "links": "Enlaces Rápidos",
+        "social": "Nuestras Redes",
+        "copyright": "Todos los derechos reservados."
+    },
+
     "buttons": {
         "begin": "Comencémos",
         "history": "Mira mi historia",

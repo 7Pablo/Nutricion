@@ -1,10 +1,10 @@
-// Navbar.js (Server component)
+// Navbar.jsx (Server component)
 
-import ToggleButton from "./buttons/ToggleButton";
+import ToggleButton from "../buttons/ToggleButton";
 import { getTranslations } from "@/locales/translations";
-import HamDropdown from "./buttons/HamDropdown";
-import NavbarButton from "./buttons/NavbarButton";
-import NavbarLinks from "./NavbarLinks";
+import HamDropdown from "../buttons/HamDropdown";
+import NavbarButton from "../buttons/NavbarButton";
+import NavbarLinks from "../NavbarLinks";
 
 export default async function Navbar({lang}) {
 

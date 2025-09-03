@@ -48,6 +48,7 @@ a:focus {
 @import './components/navbar';
 @import './components/slider';
 @import './components/ticker';
+@import './components/footer';
 
 // Cards
 @import './cards/benefits-card';
@@ -59,6 +60,7 @@ a:focus {
 @import './buttons/toggle-button';
 @import './buttons/ham-dropdown';
 @import './buttons/double-button';
+@import './buttons/social-button';
 
 body {
 	background-color: $background; 
