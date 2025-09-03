@@ -134,7 +134,7 @@ export default async function LandingPage({params}) {
         <div className="landing-page">
 
           {/* Start */}
-          <section id="start" className="start">
+          <section className="start">
             <div className="start__content">
               <div className="start__left">
                 <div className="start__left--container">

@@ -13,7 +13,7 @@ export default async function Navbar({lang}) {
     const trans = await getTranslations(locale);
 
     return (
-        <div className="navbar">
+        <div id="start" className="navbar">
             <div className="navbar__content">
                 <NavbarButton trans={trans} />
                 <NavbarLinks trans={trans} />

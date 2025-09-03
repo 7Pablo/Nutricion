@@ -2,9 +2,11 @@
     @include flex();
     background: linear-gradient(to right, rgba($purple-secondary, 0.8) 0%, rgba($violet, 0.8) 100%);
     width: 100%;
+    overflow: hidden;
 
     &__content {
         @include flex($gap: 40px);
+        align-items: stretch; 
         max-width: 1440px;
         width: 100%;
         padding: 60px 50px 40px;
@@ -54,6 +56,9 @@
         @include flex($direction: row, $justify: space-between, $align: start);
         width: 100%;
         max-width: 950px;
+
+        align-self: center !important;
+        justify-self: center !important;
 
         h2 {
             @include body-font($size: 20px, $weight: 700, $color: #fff);
@@ -116,5 +121,76 @@
         line-height: 20px;
         text-align: center;
         padding-top: 8px;
+    }
+}
+
+// Responsive medium
+@include responsive(medium) {
+    .footer {
+        &__content {
+            padding: 50px 40px 30px;
+        }
+    }
+}
+
+// Responsive smedium
+@include responsive(smedium) {
+    .footer {
+        &__top {
+            &--logo {
+                img {
+                    height: 62px;
+                    width: 62px;
+                }
+
+                &-text {
+                    h2, h3 {
+                        font-size: 28px;
+                        line-height: 28px;
+                    }
+                }
+            }
+
+            p {
+                font-size: 18px;
+                line-height: 22px;
+            }
+        }
+
+        &__bottom {
+            @include flex($align: start, $gap: 40px);
+            max-width: 240px;
+
+            h2 {
+                font-size: 18px;
+            }
+            
+            p {
+                font-size: 16px;
+                line-height: 22px;
+                max-width: 200px;
+            }
+        }
+    }
+}
+
+// Responsive small
+@include responsive(small) {
+    .footer {
+        &__content {
+            gap: 30px;
+            padding: 50px 30px 30px;
+        }
+
+        &__top {
+            &--logo {
+                &-text {
+                    h2, h3 {
+                        font-size: 20px;
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
     }
 }

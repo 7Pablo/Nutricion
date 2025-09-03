@@ -126,3 +126,23 @@ export const tickerFadeInUp = {
   },
   exit: { opacity: 0, y: 40 },     
 };
+
+export const riseFromBottom = (delay = 0) => ({
+  initial: { opacity: 0, y: 80 },
+  animate: {
+    opacity: 1,
+    y: [80, -10, 0], 
+    transition: {
+      delay,
+      duration: 0.8,
+      ease: "easeOut"
+    }
+  },
+  exit: {
+    opacity: 0,
+    y: 80,
+    transition: { duration: 0.5, ease: "easeIn" }
+  }
+});
+
+

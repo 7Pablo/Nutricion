@@ -1643,6 +1643,7 @@ a:focus {
   justify-content: center;
   background: linear-gradient(to right, rgba(110, 97, 212, 0.8) 0%, rgba(162, 103, 231, 0.8) 100%);
   width: 100%;
+  overflow: hidden;
 }
 .footer__content {
   display: flex;
@@ -1650,6 +1651,7 @@ a:focus {
   gap: 40px;
   align-items: center;
   justify-content: center;
+  align-items: stretch;
   max-width: 1440px;
   width: 100%;
   padding: 60px 50px 40px;
@@ -1718,6 +1720,8 @@ a:focus {
   justify-content: space-between;
   width: 100%;
   max-width: 950px;
+  align-self: center !important;
+  justify-self: center !important;
 }
 .footer__bottom h2 {
   font-family: "Poppins", sans-serif;
@@ -1813,6 +1817,51 @@ a:focus {
   padding-top: 8px;
 }
 
+@media (max-width: 1200px) {
+  .footer__content {
+    padding: 50px 40px 30px;
+  }
+}
+@media (max-width: 800px) {
+  .footer__top--logo img {
+    height: 62px;
+    width: 62px;
+  }
+  .footer__top--logo-text h2, .footer__top--logo-text h3 {
+    font-size: 28px;
+    line-height: 28px;
+  }
+  .footer__top p {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .footer__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: start;
+    justify-content: center;
+    max-width: 240px;
+  }
+  .footer__bottom h2 {
+    font-size: 18px;
+  }
+  .footer__bottom p {
+    font-size: 16px;
+    line-height: 22px;
+    max-width: 200px;
+  }
+}
+@media (max-width: 550px) {
+  .footer__content {
+    gap: 30px;
+    padding: 50px 30px 30px;
+  }
+  .footer__top--logo-text h2, .footer__top--logo-text h3 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
 .benefit-card {
   display: flex;
   flex-direction: column;
