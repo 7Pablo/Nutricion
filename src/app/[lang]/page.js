@@ -8,9 +8,46 @@ import ServiceCard from "@/components/cards/BenefitCard";
 import AnimatedSection from "@/utils/AnimatedSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import TestimonialTicker from "@/components/TestimonialTicker";
+import { getAssetPath } from "@/utils/getAssetPath";
+
+// Metadata
+export async function generateMetadata({ params }) {
+
+  // Translations
+  const { lang } = await params; 
+  const trans = await getTranslations(lang);
+
+  // Canonical
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const path = `/${lang}`; 
+  const canonicalUrl = `${baseUrl}${path}`;
+
+  return {
+    title: trans.metadata?.title || "Nutrición real para mujeres reales – María Gracia Yturralde",
+    description: trans.metadata?.description || "Acompañamiento nutricional especializado en cada etapa de tu bienestar femenino. Equilibra tu salud hormonal, tu energía y tu relación con la comida con un enfoque consciente y sostenible.",
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: trans.metadata?.title || "Nutrición real para mujeres reales – María Gracia Yturralde",
+      description: trans.metadata?.description || "Acompañamiento nutricional especializado en cada etapa de tu bienestar femenino. Descubre cómo reconectar con tu salud desde la alimentación.",
+      url: canonicalUrl,
+      siteName: "María Gracia Yturralde",
+      images: [
+        {
+          url: getAssetPath("/logos/nutricion_logo.webp"),
+          height: 630,
+          alt: trans.metadata?.title_short || "Nutrición real para mujeres reales",
+        },
+      ],
+      locale: lang,
+      type: "website",
+    },
+  };
+}
 
 // LandingPage
-export default async function LandingPage({params}) {
+export default async function LandingPage({ params }) {
 
     // Translations
     const { lang } = await params;
@@ -19,7 +56,7 @@ export default async function LandingPage({params}) {
     // Services
     const all = [
        {
-        img: "/pictures/service1.jpg",
+        img: getAssetPath("/pictures/service1.jpg"),
         alt: "Programa de bienestar general",
         title: trans.services.card_title1,
         body: trans.services.card_body1,
@@ -27,7 +64,7 @@ export default async function LandingPage({params}) {
         format: trans.services.format,
        },
        {
-        img: "/pictures/service2.jpg",
+        img: getAssetPath("/pictures/service2.jpg"),
         alt: "Asesoría nutricional",
         title: trans.services.card_title2,
         body: trans.services.card_body2,
@@ -35,7 +72,7 @@ export default async function LandingPage({params}) {
         format: `${trans.services.format}/Online`,
        },
        {
-        img: "/pictures/service3.jpg",
+        img: getAssetPath("/pictures/service3.jpg"),
         alt: "Plan de nutrición hormonal",
         title: trans.services.card_title3,
         body: trans.services.card_body3,
@@ -43,7 +80,7 @@ export default async function LandingPage({params}) {
         format: "Online",
        },
        {
-        img: "/pictures/service1.jpg",
+        img: getAssetPath("/pictures/service1.jpg"),
         alt: "Programa de bienestar general",
         title: trans.services.card_title1,
         body: trans.services.card_body1,
@@ -51,7 +88,7 @@ export default async function LandingPage({params}) {
         format: trans.services.format,
        },
        {
-        img: "/pictures/service3.jpg",
+        img: getAssetPath("/pictures/service3.jpg"),
         alt: "Plan de nutrición hormonal",
         title: trans.services.card_title3,
         body: trans.services.card_body3,
@@ -62,7 +99,7 @@ export default async function LandingPage({params}) {
 
     const business = [
        {
-        img: "/pictures/service1.jpg",
+        img: getAssetPath("/pictures/service1.jpg"),
         alt: "Programa de bienestar general",
         title: trans.services.card_title1,
         body: trans.services.card_body1,
@@ -70,7 +107,7 @@ export default async function LandingPage({params}) {
         format: trans.services.format,
        },
        {
-        img: "/pictures/service1.jpg",
+        img: getAssetPath("/pictures/service1.jpg"),
         alt: "Programa de bienestar general",
         title: trans.services.card_title1,
         body: trans.services.card_body1,
@@ -78,7 +115,7 @@ export default async function LandingPage({params}) {
         format: trans.services.format,
        },
        {
-        img: "/pictures/service1.jpg",
+        img: getAssetPath("/pictures/service1.jpg"),
         alt: "Programa de bienestar general",
         title: trans.services.card_title1,
         body: trans.services.card_body1,
@@ -86,7 +123,7 @@ export default async function LandingPage({params}) {
         format: trans.services.format,
        },
        {
-        img: "/pictures/service1.jpg",
+        img: getAssetPath("/pictures/service1.jpg"),
         alt: "Programa de bienestar general",
         title: trans.services.card_title1,
         body: trans.services.card_body1,
@@ -94,7 +131,7 @@ export default async function LandingPage({params}) {
         format: trans.services.format,
        },
        {
-        img: "/pictures/service1.jpg",
+        img: getAssetPath("/pictures/service1.jpg"),
         alt: "Programa de bienestar general",
         title: trans.services.card_title1,
         body: trans.services.card_body1,
@@ -105,7 +142,7 @@ export default async function LandingPage({params}) {
 
     const testimonials = [
       {
-        img: "/pictures/testimonial1.jpeg",
+        img: getAssetPath("/pictures/testimonial1.jpeg"),
         alt: "Testimonio Laura Méndez",
         name: "Laura Méndez",
         time: `${trans.testimonials.patient1} 2023`,
@@ -113,7 +150,7 @@ export default async function LandingPage({params}) {
         position: "50% 50%"
       },
       {
-        img: "/pictures/testimonial2.jpg",
+        img: getAssetPath("/pictures/testimonial2.jpg"),
         alt: "Testimonio Carlos Ríos",
         name: "Carlos Ríos",
         time: `${trans.testimonials.patient2}`,
@@ -121,7 +158,7 @@ export default async function LandingPage({params}) {
         position: "50% 50%"
       },
       {
-        img: "/pictures/testimonial3.webp",
+        img: getAssetPath("/pictures/testimonial3.webp"),
         alt: "Testimonio Valentina Ortiz",
         name: "Valentina Ortiz",
         time: `${trans.testimonials.patient1} 2020`,
@@ -134,7 +171,7 @@ export default async function LandingPage({params}) {
         <div className="landing-page">
 
           {/* Start */}
-          <section className="start">
+          <section  className="start">
             <div className="start__content">
               <div className="start__left">
                 <div className="start__left--container">
@@ -142,14 +179,17 @@ export default async function LandingPage({params}) {
                     <h1>{trans.start.title}</h1>
                     <h2>{trans.start.subtitle}</h2>
                   </div>
-                  <Button type="primary">
+                  <Button 
+                    type="primary"
+                    scrollTo="summary"
+                  >
                     {trans.buttons.begin}
                   </Button>
                 </div>
               </div>
               <div className="start__right">
                 <Image 
-                  src="/pictures/start-picture.png"
+                  src={getAssetPath("/pictures/start-picture.png")}
                   alt="Imagen de Maria Gracia Yturralde"
                   height={500}
                   width={500}
@@ -161,7 +201,7 @@ export default async function LandingPage({params}) {
               <div className="start__decoration">
                 <div className="start__decoration--balls-1">
                   <Image
-                    src="/images/purple-balls.png"
+                    src={getAssetPath("/images/purple-balls.webp")}
                     alt="Fondo de formas moradas"
                     height={600}
                     width={600}
@@ -169,7 +209,7 @@ export default async function LandingPage({params}) {
                 </div>
                 <div className="start__decoration--balls-2">
                   <Image
-                    src="/images/purple-balls.png"
+                    src={getAssetPath("/images/purple-balls.webp")}
                     alt="Fondo de formas moradas"
                     height={600}
                     width={600}
@@ -181,7 +221,7 @@ export default async function LandingPage({params}) {
               <div className="start__background">
                 <div className="start__background--fruit-1">
                   <Image
-                    src="/images/leaf-one2.png"
+                    src={getAssetPath("/images/leaf-one2.png")}
                     alt="Hoja verde"
                     height={50}
                     width={50}
@@ -189,7 +229,7 @@ export default async function LandingPage({params}) {
                 </div>
                 <div className="start__background--fruit-2">
                   <Image
-                    src="/images/leaf-one1.png"
+                    src={getAssetPath("/images/leaf-one1.png")}
                     alt="Hoja verde"
                     height={45}
                     width={45}
@@ -197,7 +237,7 @@ export default async function LandingPage({params}) {
                 </div>
                 <div className="start__background--fruit-3">
                   <Image
-                    src="/images/leaf-one2.png"
+                    src={getAssetPath("/images/leaf-one2.png")}
                     alt="Hoja verde"
                     height={35}
                     width={35}
@@ -205,7 +245,7 @@ export default async function LandingPage({params}) {
                 </div>
                 <div className="start__background--fruit-4">
                   <Image
-                    src="/images/blue1.png"
+                    src={getAssetPath("/images/blue1.png")}
                     alt="Mora azul"
                     height={80}
                     width={80}
@@ -213,7 +253,7 @@ export default async function LandingPage({params}) {
                 </div>
                 <div className="start__background--fruit-5">
                   <Image
-                    src="/images/leaf-three1.png"
+                    src={getAssetPath("/images/leaf-three1.png")}
                     alt="Hoja verde"
                     height={90}
                     width={90}
@@ -221,7 +261,7 @@ export default async function LandingPage({params}) {
                 </div>
                 <div className="start__background--fruit-6">
                   <Image
-                    src="/images/blue2.png"
+                    src={getAssetPath("/images/blue2.png")}
                     alt="Mora azul"
                     height={80}
                     width={80}
@@ -229,7 +269,7 @@ export default async function LandingPage({params}) {
                 </div>
                 <div className="start__background--fruit-7">
                   <Image
-                    src="/images/red.png"
+                    src={getAssetPath("/images/red.png")}
                     alt="Frambuesa"
                     height={60}
                     width={60}
@@ -237,7 +277,7 @@ export default async function LandingPage({params}) {
                 </div>
                 <div className="start__background--fruit-8">
                   <Image
-                    src="/images/leaf-three2.png"
+                    src={getAssetPath("/images/leaf-three2.png")}
                     alt="Hoja verde"
                     height={90}
                     width={90}
@@ -245,7 +285,7 @@ export default async function LandingPage({params}) {
                 </div>
                 <div className="start__background--fruit-9">
                   <Image
-                    src="/images/leaf-one1.png"
+                    src={getAssetPath("/images/leaf-one1.png")}
                     alt="Hoja verde"
                     height={45}
                     width={45}
@@ -253,7 +293,7 @@ export default async function LandingPage({params}) {
                 </div>
                 <div className="start__background--fruit-10">
                   <Image
-                    src="/images/red.png"
+                    src={getAssetPath("/images/red.png")}
                     alt="Frambuesa"
                     height={80}
                     width={80}
@@ -261,7 +301,7 @@ export default async function LandingPage({params}) {
                 </div>
                 <div className="start__background--fruit-11">
                   <Image
-                    src="/images/blue1.png"
+                    src={getAssetPath("/images/blue1.png")}
                     alt="Mora azul"
                     height={40}
                     width={40}
@@ -269,7 +309,7 @@ export default async function LandingPage({params}) {
                 </div>
                 <div className="start__background--fruit-12">
                   <Image
-                    src="/images/leaf-three2.png"
+                    src={getAssetPath("/images/leaf-three2.png")}
                     alt="Hoja verde"
                     height={75}
                     width={75}
@@ -277,7 +317,7 @@ export default async function LandingPage({params}) {
                 </div>
                 <div className="start__background--fruit-13">
                   <Image
-                    src="/images/blue3.png"
+                    src={getAssetPath("/images/blue3.png")}
                     alt="Mora azul"
                     height={80}
                     width={80}
@@ -285,7 +325,7 @@ export default async function LandingPage({params}) {
                 </div>
                 <div className="start__background--fruit-14">
                   <Image
-                    src="/images/leaf-two.png"
+                    src={getAssetPath("/images/leaf-two.png")}
                     alt="Hoja verde"
                     height={75}
                     width={75}
@@ -308,7 +348,7 @@ export default async function LandingPage({params}) {
             <div className="summary__cards">
               <AnimatedSection animation='flipCard'>
                 <ServiceCard
-                  img="/icons/cycle.png"
+                  img={getAssetPath("/icons/cycle.png")}
                   alt="Icono de flechas en ciclo"
                   title={trans.summary.card_title1}
                   body={trans.summary.card_body1}
@@ -316,7 +356,7 @@ export default async function LandingPage({params}) {
               </AnimatedSection>
               <AnimatedSection animation='flipCard' delay={0.2}>
                 <ServiceCard
-                  img="/icons/apple.png"
+                  img={getAssetPath("/icons/apple.png")}
                   alt="Icono de manzana"
                   title={trans.summary.card_title2}
                   body={trans.summary.card_body2}
@@ -324,7 +364,7 @@ export default async function LandingPage({params}) {
               </AnimatedSection>
               <AnimatedSection animation='flipCard' delay={0.4}>
                 <ServiceCard
-                  img="/icons/leaf.png"
+                  img={getAssetPath("/icons/leaf.png")}
                   alt="Icono de hoja"
                   title={trans.summary.card_title3}
                   body={trans.summary.card_body3}
@@ -332,7 +372,7 @@ export default async function LandingPage({params}) {
               </AnimatedSection>
               <AnimatedSection animation='flipCard' delay={0.6}>
                 <ServiceCard
-                  img="/icons/heart.png"
+                  img={getAssetPath("/icons/heart.png")}
                   alt="Icono de corazon"
                   title={trans.summary.card_title4}
                   body={trans.summary.card_body4}
@@ -347,7 +387,7 @@ export default async function LandingPage({params}) {
               <div className="about__top--image">
                 <AnimatedSection animation="fadeInScale" delay={0}>
                   <Image
-                    src="/pictures/about-picture.png"
+                    src={getAssetPath("/pictures/about-picture.png")}
                     alt="Imagen de Maria Gracia Yturralde"
                     height={400}
                     width={400}
@@ -357,7 +397,7 @@ export default async function LandingPage({params}) {
                   <AnimatedSection animation="fallingLeafAnim" delay={0.2}>
                     <div className="about__background--fruit-1">
                       <Image
-                        src="/images/leaf-three1.png"
+                        src={getAssetPath("/images/leaf-three1.png")}
                         alt="Hoja verde"
                         height={75}
                         width={75}
@@ -367,7 +407,7 @@ export default async function LandingPage({params}) {
                   <AnimatedSection animation="fallingLeafAnimReverse" delay={0.2}>
                     <div className="about__background--fruit-2">
                       <Image
-                        src="/images/leaf-one2.png"
+                        src={getAssetPath("/images/leaf-one2.png")}
                         alt="Hoja verde"
                         height={65}
                         width={65}
@@ -377,7 +417,7 @@ export default async function LandingPage({params}) {
                   <AnimatedSection animation="fallingLeafAnim" delay={0.2}>
                     <div className="about__background--fruit-3">
                       <Image
-                        src="/images/leaf-three2.png"
+                        src={getAssetPath("/images/leaf-three2.png")}
                         alt="Hoja verde"
                         height={130}
                         width={130}
@@ -387,7 +427,7 @@ export default async function LandingPage({params}) {
                   <AnimatedSection animation="fallingLeafAnimReverse" delay={0.2}>
                     <div className="about__background--fruit-4">
                       <Image
-                        src="/images/leaf-one1.png"
+                        src={getAssetPath("/images/leaf-one1.png")}
                         alt="Hoja verde"
                         height={60}
                         width={60}
@@ -397,7 +437,7 @@ export default async function LandingPage({params}) {
                   <AnimatedSection animation="fallingLeafAnim" delay={0.2}>
                     <div className="about__background--fruit-5">
                       <Image
-                        src="/images/leaf-one2.png"
+                        src={getAssetPath("/images/leaf-one2.png")}
                         alt="Hoja verde"
                         height={65}
                         width={65}
@@ -407,7 +447,7 @@ export default async function LandingPage({params}) {
                   <AnimatedSection animation="fallingLeafAnimReverse" delay={0.2}>
                     <div className="about__background--fruit-6">
                       <Image
-                        src="/images/leaf-two.png"
+                        src={getAssetPath("/images/leaf-two.png")}
                         alt="Hoja verde"
                         height={95}
                         width={95}
@@ -435,7 +475,10 @@ export default async function LandingPage({params}) {
                   </AnimatedSection>
                 </div>
                 <AnimatedSection animation="slideFromRight" delay={1.2}>
-                  <Button type="secondary">
+                  <Button 
+                    type="secondary"
+                    href="https://www.google.com/"
+                  >
                     {trans.buttons.history}
                   </Button>
                 </AnimatedSection>
@@ -444,19 +487,19 @@ export default async function LandingPage({params}) {
             <AnimatedSection animation="fadeInUp" delay={0.2}>
               <div className="about__bottom">
                 <Image
-                  src="/images/catolica.png"
+                  src={getAssetPath("/images/catolica.png")}
                   alt="Logo de Universidad Catolica de Santiago de Guayaquil"
                   height={225}
                   width={225}
                 />
                 <Image
-                  src="/images/uib.png"
+                  src={getAssetPath("/images/uib.png")}
                   alt="Logo de Universitat de les Illes Balears"
                   height={225}
                   width={225}
                 />
                 <Image
-                  src="/images/psc.png"
+                  src={getAssetPath("/images/psc.png")}
                   alt="Logo de Politecnico Superior de Colombia"
                   height={225}
                   width={225}
@@ -472,7 +515,7 @@ export default async function LandingPage({params}) {
           <section id="testimonials" className="testimonials">
             <div className="testimonials__decoration">
               <Image
-                src="/images/purple-balls-big.png"
+                src={getAssetPath("/images/purple-balls-big.webp")}
                 alt="Fondo de formas moradas"
                 height={600}
                 width={600}

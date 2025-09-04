@@ -67,12 +67,12 @@ export default function Slider({ slides }) {
                 <SwiperSlide key={index}>
                     <div className="slider__slide-inner">
                         <ServiceCard
-                        img={slide.img}
-                        alt={slide.alt}
-                        title={slide.title}
-                        body={slide.body}
-                        time={slide.time}
-                        format={slide.format}
+                            img={slide.img}
+                            alt={slide.alt}
+                            title={slide.title}
+                            body={slide.body}
+                            time={slide.time}
+                            format={slide.format}
                         />
                     </div>
                 </SwiperSlide>

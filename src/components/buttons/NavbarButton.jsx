@@ -2,6 +2,7 @@
 'use client';
 
 import Image from "next/image";
+import { getAssetPath } from "@/utils/getAssetPath";
 
 export default function NavbarButton({trans}) {
 
@@ -17,7 +18,7 @@ export default function NavbarButton({trans}) {
         >
             <div className="navbar__logo">
                 <Image
-                    src="/logos/nutricion_logo.webp"
+                    src={getAssetPath("/logos/nutricion_logo.webp")}
                     alt="Maria Gracia Yturralde - Nutricionista Logo"
                     priority
                     width={200}

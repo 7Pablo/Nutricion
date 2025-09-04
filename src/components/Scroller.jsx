@@ -1,6 +1,8 @@
 'use client';
+
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
+import { getAssetPath } from '@/utils/getAssetPath';
 
 export default function Scroller() {
   const imageRef = useRef();
@@ -55,7 +57,7 @@ export default function Scroller() {
         onClick={() => scrollToSummary()}
       >
         <Image
-          src="/icons/mouse.png"
+          src={getAssetPath("/icons/mouse.png")}
           alt="Icono de mouse"
           height={40}
           width={40}
@@ -66,7 +68,7 @@ export default function Scroller() {
         onClick={() => scrollToSummary()}
       >
         <Image
-          src="/icons/arrow.png"
+          src={getAssetPath("/icons/arrow.png")}
           alt="Icono de flecha"
           height={35}
           width={35}

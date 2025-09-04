@@ -6,6 +6,7 @@ import SocialButton from "../buttons/SocialButton";
 import { getCurrentYear } from "@/utils/date";
 import AnimatedSection from "@/utils/AnimatedSection";
 import FooterLinks from "../FooterLinks";
+import { getAssetPath } from "@/utils/getAssetPath";
 
 export default async function Footer({lang}) {
 
@@ -23,7 +24,7 @@ export default async function Footer({lang}) {
                     <div className="footer__top">
                         <div className="footer__top--logo">
                             <Image
-                                src="/logos/nutricion_logo.webp"
+                                src={getAssetPath("/logos/nutricion_logo.webp")}
                                 alt="Maria Gracia Yturralde - Nutricionista Logo"
                                 priority
                                 width={200}
@@ -48,7 +49,7 @@ export default async function Footer({lang}) {
                             <div className="footer__bottom--contact-items">
                                 <div className="footer__bottom--contact-item">
                                     <Image
-                                        src="/icons/address.png"
+                                        src={getAssetPath("/icons/address.png")}
                                         alt="Icono contacto"
                                         width={25}
                                         height={25}
@@ -57,7 +58,7 @@ export default async function Footer({lang}) {
                                 </div>
                                 <div className="footer__bottom--contact-item">
                                     <Image
-                                        src="/icons/phone.png"
+                                        src={getAssetPath("/icons/phone.png")}
                                         alt="Icono contacto"
                                         width={25}
                                         height={25}
@@ -66,7 +67,7 @@ export default async function Footer({lang}) {
                                 </div>
                                 <div className="footer__bottom--contact-item">
                                     <Image
-                                        src="/icons/wpp.png"
+                                        src={getAssetPath("/icons/wpp.png")}
                                         alt="Icono contacto"
                                         width={25}
                                         height={25}
@@ -75,7 +76,7 @@ export default async function Footer({lang}) {
                                 </div>
                                 <div className="footer__bottom--contact-item">
                                     <Image
-                                        src="/icons/mail.png"
+                                        src={getAssetPath("/icons/mail.png")}
                                         alt="Icono contacto"
                                         width={25}
                                         height={25}
@@ -92,17 +93,17 @@ export default async function Footer({lang}) {
                             <h2>{trans.footer.social}</h2>
                             <div className="footer__bottom--social-items">
                                 <SocialButton
-                                    icon="/icons/instagram.png"
+                                    icon={getAssetPath("/icons/instagram.png")}
                                     text="María Gracia Yturralde"
                                     link="https://www.google.com/"
                                 />
                                 <SocialButton
-                                    icon="/icons/facebook.png"
+                                    icon={getAssetPath("/icons/facebook.png")}
                                     text="María Gracia Yturralde"
                                     link="https://www.google.com/"
                                 />
                                 <SocialButton
-                                    icon="/icons/tiktok.png"
+                                    icon={getAssetPath("/icons/tiktok.png")}
                                     text="María Gracia Yturralde"
                                     link="https://www.google.com/"
                                 />

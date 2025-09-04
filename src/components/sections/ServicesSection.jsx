@@ -6,6 +6,7 @@ import DoubleButton from "@/components/buttons/DoubleButton";
 import Slider from "@/components/Slider";
 import Image from "next/image";
 import AnimatedSection from "@/utils/AnimatedSection";
+import { getAssetPath } from "@/utils/getAssetPath";
 
 export default function ServicesSection({ trans, all, business }) {
     // Estado del boton
@@ -68,7 +69,7 @@ export default function ServicesSection({ trans, all, business }) {
                 <div className="services__decoration">
                     <div ref={leftRef} className="services__decoration--left">
                         <Image
-                            src="/images/fruits-left.png"
+                            src={getAssetPath("/images/fruits-left.webp")}
                             alt="Fondo de frutas"
                             height={600}
                             width={600}
@@ -76,7 +77,7 @@ export default function ServicesSection({ trans, all, business }) {
                     </div>
                     <div ref={rightRef} className="services__decoration--right">
                         <Image
-                            src="/images/fruits-right.png"
+                            src={getAssetPath("/images/fruits-right.webp")}
                             alt="Fondo de frutas"
                             height={600}
                             width={600}

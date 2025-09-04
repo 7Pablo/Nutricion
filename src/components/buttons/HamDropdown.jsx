@@ -4,6 +4,7 @@ import { Menu } from "@chakra-ui/react";
 import { useState } from "react";
 import Image from "next/image";
 import ToggleButton from "./ToggleButton";
+import { getAssetPath } from "@/utils/getAssetPath";
 
 export default function HamDropdown({ trans, lang }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +24,7 @@ export default function HamDropdown({ trans, lang }) {
         <Menu.Trigger asChild>
           <button className={`ham-dropdown__button ${isOpen ? "is-open" : ""}`}>
             <Image
-              src="/icons/ham.svg"
+              src={getAssetPath("/icons/ham.svg")}
               alt="Menu icon"
               height={300}
               width={300}

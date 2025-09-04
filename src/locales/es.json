@@ -73,5 +73,11 @@
         "history": "Mira mi historia",
         "all": "Pata todos",
         "business": "Para empresas"
+    },
+
+    "metadata": {
+        "title": "Nutrición real para mujeres reales – María Gracia Yturralde",
+        "description": "Acompañamiento nutricional especializado en cada etapa de tu bienestar femenino. Equilibra tu salud hormonal, tu energía y tu relación con la comida con un enfoque consciente y sostenible.",
+        "title_short": "Nutrición real para mujeres reales"
     }
 }
