@@ -8,6 +8,7 @@
 	border-radius: 20px;
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 	margin-top: 70px 0;
+	user-select: none;
 
 	&__top {
 		@include flex($direction: row, $justify: start, $gap: 10px);
@@ -60,8 +61,8 @@
 
 @include responsive(smedium) {
 	.testimonial-card {
-		max-width: 325px;
-		min-height: 310px;
+		width: 80vw;
+		height: fit-content;
 
 		&__top {
 			&--text {

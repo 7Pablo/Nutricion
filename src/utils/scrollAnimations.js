@@ -145,4 +145,16 @@ export const riseFromBottom = (delay = 0) => ({
   }
 });
 
-
+export const bouncingBall = (delay = 0) => ({
+  initial: { opacity: 0, y: -50 },
+  animate: {
+    opacity: 1,
+    y: [ -50, 20, -10, 0 ], 
+    transition: {
+      delay,
+      duration: 1.2,
+      ease: "easeOut",
+    },
+  },
+  exit: { opacity: 0, y: -50, transition: { duration: 0.5 } },
+});

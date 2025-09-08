@@ -12,6 +12,10 @@ export default function ServicesSection({ trans, all, business }) {
     // Estado del boton
     const [active, setActive] = useState("all");
 
+    // Arrays repetidos
+    const repeatedAll = [...all, ...all]; 
+    const repeatedBusiness = [...business, ...business]; 
+
     // Refs para el paralax
     const leftRef = useRef(null);
     const rightRef = useRef(null);
@@ -58,11 +62,17 @@ export default function ServicesSection({ trans, all, business }) {
                     <DoubleButton trans={trans} active={active} setActive={setActive} />
                     {active === "all" ? (
                         <AnimatedSection animation="bouncyRise" delay={0.2}>
-                            <Slider slides={all} />
+                            <Slider 
+                                slides={repeatedAll} 
+                                trans={trans}
+                            />
                         </AnimatedSection>
                     ) : (
                         <AnimatedSection animation="bouncyRise" delay={0.2}>
-                            <Slider slides={business} />
+                            <Slider 
+                                slides={repeatedBusiness} 
+                                trans={trans}
+                            />
                         </AnimatedSection>
                     )}
                 </div>

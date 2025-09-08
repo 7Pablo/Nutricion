@@ -36,7 +36,8 @@
         }
     }
 
-    &__ticker {
+    &__wrapper {
+        @include flex();
         width: 100vw;
         overflow: hidden;
     }
@@ -48,6 +49,7 @@
         transform: translate(-50%, -40%);
         z-index: 1;
         pointer-events: none;
+        user-select: none;
 
         img {
             height: 700px;
@@ -92,6 +94,10 @@
                 font-size: 18px;
                 line-height: 22px;
             }
+        }
+
+        &__wrapper {
+            overflow: visible;
         }
 
         &__decoration {

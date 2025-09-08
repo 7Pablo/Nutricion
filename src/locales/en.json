@@ -38,12 +38,24 @@
         "top": "Explore All",
         "center": "My Services",
         "bottom": "I’m here to provide you with the tools and support you need to successfully reach your goals. Explore the services I offer and find the perfect solution for your needs.",
-        "card_title1": "General Wellness Program",
-        "card_body1": "A holistic approach that includes personalized exercises and recipes to boost your energy.",
-        "card_title2": "Nutritional Counseling",
-        "card_body2": "A personalized session to review your habits and create a tailored meal plan.",
-        "card_title3": "Hormonal Nutrition Plan",
-        "card_body3": "A plan to balance the menstrual cycle or address hormonal issues through diet.",
+        "card1": {
+            "card_title": "General Wellness Program",
+            "card_body": "A holistic approach that includes exercises and personalized recipes to boost energy.",
+            "card_long1": "A personalized session where, in a close and professional manner, we will thoroughly review your eating habits, daily routines, personal preferences, and lifestyle. Based on this information, we will design a nutrition plan completely tailored to you, taking into account not only your physical and health needs, but also your personal goals, overall well-being, and long-term sustainability.",
+            "card_long2": "The goal is for you to find a healthy balance that fits into your daily life, helps you improve your relationship with food, and allows you to achieve real and lasting results."
+        },
+        "card2": {
+            "card_title": "Nutritional Counseling",
+            "card_body": "Personalized session to review habits and create a tailored meal plan.",
+            "card_long1": "A specialized nutrition plan designed to help you balance your menstrual cycle and address possible hormonal imbalances through diet. In this counseling session, we will work on selecting foods that promote hormonal balance, reduce symptoms such as pain, inflammation, or mood swings, and improve your overall well-being.",
+            "card_long2": "The goal is to provide you with a practical and personalized guide that, through diet, supports the natural regulation of your body and contributes to sustainably improving your quality of life."
+        },
+        "card3": {
+            "card_title": "Hormonal Nutrition Plan",
+            "card_body": "Plan to balance the menstrual cycle or hormonal issues through diet.",
+            "card_long1": "A holistic approach that combines nutrition with movement, integrating exercises tailored to your level and needs, along with personalized recipes designed to enhance your well-being. Each recommendation is intended to help you maintain a balanced routine that supports both your body and your mind.",
+            "card_long2": "The goal is that, through healthy habits, you can improve your daily energy, increase your vitality, and strengthen your overall health in a practical and sustainable way over time."
+        },
         "format": "In-person",
         "weeks": "weeks",
         "days": "days"
@@ -72,6 +84,13 @@
         "begin": "Let's get started",
         "history": "See my story",
         "all": "For everyone",
-        "business": "For businesses"
+        "business": "For businesses",
+        "contact": "Contact me"
+    },
+
+    "metadata": {
+        "title": "Real Nutrition for Real Women – María Gracia Yturralde",
+        "description": "Specialized nutritional guidance for every stage of your feminine well-being. Balance your hormonal health, your energy, and your relationship with food through a conscious and sustainable approach.",
+        "title_short": "Real Nutrition for Real Women"
     }
 }

@@ -5,6 +5,17 @@
     width: 325px;
     height: 450px;
     overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    user-select: none;
+
+    &:hover {
+        transform: scale(0.97);
+    }
+
+    &:active {
+        transform: scale(0.92);
+    }
 
     &__image {
         position: relative;
@@ -46,5 +57,192 @@
                 line-height: 20px;
             }
         }
+    }
+}
+
+.service-pop {
+    @include flex($direction: row, $justify: space-between);
+    box-shadow: 0px 4px 6px rgba($color: #000000, $alpha: 0.25);
+    background-color: #ffff;
+    border-radius: 20px;
+    height: 600px;
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden;
+
+    &__close {
+        position: absolute;
+        right: 70px;
+        top: 45px;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        z-index: 10;
+
+        &:hover {
+            transform: scale(0.95);
+        }
+
+        &:active {
+            transform: scale(0.9);
+        }
+    }
+
+    &__image {
+        position: relative;
+        width: 40%;
+        height: 100%;
+        user-select: none;
+    }
+
+    &__wrapper {
+        @include flex($align: start, $justify: space-between);
+        flex: 1.1;
+        padding: 80px 50px 60px;
+        height: 100%;
+        width: 100%;
+    }
+
+    &__content {
+        @include flex($align: start, $justify: start, $gap: 20px);
+        white-space: pre-line; 
+
+        h2 {
+            @include title-font($size: 25px, $color: $gray);
+            line-height: 25px;
+        }
+
+        &--text {
+            overflow-y: scroll;
+
+            scrollbar-width: none;   
+            -ms-overflow-style: none; 
+
+            &::-webkit-scrollbar {
+                display: none;   
+            }
+            
+            p {
+                @include body-font($size: 16px, $color: $gray);
+                line-height: 22px;
+                max-height: 350px;
+            }
+        }
+    }
+
+    &__info {
+        @include flex($direction: row, $justify: start, $gap: 20px);
+        width: 100%;
+
+        &--item {
+            @include flex($direction: row, $gap: 8px);
+
+            p {
+                @include body-font($size: 16px, $color: #aaaaaa);
+                line-height: 18px;
+            }
+        }
+    }
+}
+
+.chakra-dialog__trigger {
+    width: 100%;
+}
+
+.chakra-dialog__positioner {
+    @include flex();
+}
+
+.chakra-dialog__backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.chakra-dialog__content {
+    position: relative;
+    max-width: 1200px;
+    height: fit-content;
+    max-height: 100vh;
+    padding: 25px 50px;
+    margin: 0;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+// Responsive medium
+@include responsive(medium) {
+    .service-pop {
+        &__wrapper {
+            padding: 60px 40px 40px;
+        }
+    }
+
+    .chakra-dialog__content {
+        padding: 25px 40px;
+    }
+}
+
+// Responsive smedium
+@include responsive(smedium) {
+    .service-pop {
+        @include flex($justify: space-between);
+        height: 700px;
+
+        &__close {
+            right: 50px;
+        }
+
+        &__image {
+            width: 100%;
+            height: 100%;
+        }
+
+        &__wrapper {
+            padding: 40px 40px 30px;
+            gap: 30px;
+        }
+
+        &__content {
+            h2 {
+                font-size: 23px;
+                line-height: 23px;
+            }
+
+            &--text {
+                p {
+                    max-height: 250px;
+                }
+            }
+        }
+    }
+}
+
+// Responsive small 
+@include responsive(small) {
+    .service-pop {
+        &__close {
+            right: 45px;
+            top: 40px;
+        }
+        
+        &__wrapper {
+            padding: 30px;
+        }
+
+        &__info {
+            &--item {
+                p {
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+            }
+        }
+    }
+
+    .chakra-dialog__content {
+        padding: 25px 30px;
+    }
+
+    .icon {
+        width: 25px !important;
+        height: 25px !important;
     }
 }

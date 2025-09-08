@@ -7,7 +7,7 @@ import Scroller from "@/components/Scroller";
 import ServiceCard from "@/components/cards/BenefitCard";
 import AnimatedSection from "@/utils/AnimatedSection";
 import ServicesSection from "@/components/sections/ServicesSection";
-import TestimonialTicker from "@/components/TestimonialTicker";
+import TestimonialTicker from "@/components/TestimonialCarousel";
 import { getAssetPath } from "@/utils/getAssetPath";
 
 // Metadata
@@ -58,86 +58,60 @@ export default async function LandingPage({ params }) {
        {
         img: getAssetPath("/pictures/service1.jpg"),
         alt: "Programa de bienestar general",
-        title: trans.services.card_title1,
-        body: trans.services.card_body1,
+        title: trans.services.card1.card_title,
+        body: trans.services.card1.card_body,
+        bodyLong: `${trans.services.card1.card_long1}\n\n${trans.services.card1.card_long2}`,
         time: `4 ${trans.services.weeks}`,
         format: trans.services.format,
        },
        {
         img: getAssetPath("/pictures/service2.jpg"),
         alt: "Asesoría nutricional",
-        title: trans.services.card_title2,
-        body: trans.services.card_body2,
+        title: trans.services.card2.card_title,
+        body: trans.services.card2.card_body,
+        bodyLong: `${trans.services.card2.card_long1}\n\n${trans.services.card2.card_long2}`,
         time: "60 min",
         format: `${trans.services.format}/Online`,
        },
        {
         img: getAssetPath("/pictures/service3.jpg"),
         alt: "Plan de nutrición hormonal",
-        title: trans.services.card_title3,
-        body: trans.services.card_body3,
+        title: trans.services.card3.card_title,
+        body: trans.services.card3.card_body,
+        bodyLong: `${trans.services.card3.card_long1}\n\n${trans.services.card3.card_long2}`,
         time: `30 ${trans.services.days}`,
         format: "Online",
        },
-       {
-        img: getAssetPath("/pictures/service1.jpg"),
-        alt: "Programa de bienestar general",
-        title: trans.services.card_title1,
-        body: trans.services.card_body1,
-        time: `4 ${trans.services.weeks}`,
-        format: trans.services.format,
-       },
-       {
-        img: getAssetPath("/pictures/service3.jpg"),
-        alt: "Plan de nutrición hormonal",
-        title: trans.services.card_title3,
-        body: trans.services.card_body3,
-        time: `30 ${trans.services.days}`,
-        format: "Online",
-       }
     ];
 
     const business = [
        {
         img: getAssetPath("/pictures/service1.jpg"),
         alt: "Programa de bienestar general",
-        title: trans.services.card_title1,
-        body: trans.services.card_body1,
+        title: trans.services.card1.card_title,
+        body: trans.services.card1.card_body,
+        bodyLong: `${trans.services.card1.card_long1}\n\n${trans.services.card1.card_long2}`,
         time: `4 ${trans.services.weeks}`,
         format: trans.services.format,
        },
        {
         img: getAssetPath("/pictures/service1.jpg"),
         alt: "Programa de bienestar general",
-        title: trans.services.card_title1,
-        body: trans.services.card_body1,
+        title: trans.services.card1.card_title,
+        body: trans.services.card1.card_body,
+        bodyLong: `${trans.services.card1.card_long1}\n\n${trans.services.card1.card_long2}`,
         time: `4 ${trans.services.weeks}`,
         format: trans.services.format,
        },
        {
         img: getAssetPath("/pictures/service1.jpg"),
         alt: "Programa de bienestar general",
-        title: trans.services.card_title1,
-        body: trans.services.card_body1,
+        title: trans.services.card1.card_title,
+        body: trans.services.card1.card_body,
+        bodyLong: `${trans.services.card1.card_long1}\n\n${trans.services.card1.card_long2}`,
         time: `4 ${trans.services.weeks}`,
         format: trans.services.format,
        },
-       {
-        img: getAssetPath("/pictures/service1.jpg"),
-        alt: "Programa de bienestar general",
-        title: trans.services.card_title1,
-        body: trans.services.card_body1,
-        time: `4 ${trans.services.weeks}`,
-        format: trans.services.format,
-       },
-       {
-        img: getAssetPath("/pictures/service1.jpg"),
-        alt: "Programa de bienestar general",
-        title: trans.services.card_title1,
-        body: trans.services.card_body1,
-        time: `4 ${trans.services.weeks}`,
-        format: trans.services.format,
-       }
     ];
 
     const testimonials = [
@@ -529,11 +503,9 @@ export default async function LandingPage({ params }) {
                   <p>{trans.testimonials.bottom}</p>
                 </div>
               </AnimatedSection>
-              <AnimatedSection animation="tickerFadeInUp" delay={0.2}>
-                <div className="testimonials__ticker">
-                  <TestimonialTicker testimonials={testimonials} />
-                </div>
-              </AnimatedSection>
+              <div className="testimonials__wrapper">
+                <TestimonialTicker testimonials={testimonials} />
+              </div>
             </div>
           </section>
           

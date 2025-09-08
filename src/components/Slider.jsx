@@ -10,7 +10,7 @@ import ServiceCard from './cards/ServiceCard';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
-export default function Slider({ slides }) {
+export default function Slider({ trans, slides }) {
     const swiperRef = useRef(null);
     const [slidesPerView, setSlidesPerView] = useState(3);
 
@@ -60,7 +60,25 @@ export default function Slider({ slides }) {
                     nextEl: '.slider__button--next',  
                     prevEl: '.slider__button--prev',  
                 }}
-                pagination={{ clickable: true }}
+                pagination={{
+                    clickable: true,
+                    renderBullet: (index, className) => {
+                        if (index < slides.length / 2) {
+                        return `<span class="${className}"></span>`;
+                        }
+                        return '';
+                    },
+                }}
+                onSlideChange={(swiper) => {
+                    const realCount = slides.length / 2; // Math.floor(slides.length/2)
+                    const realIndex = swiper.realIndex % realCount; 
+                    const bullets = swiper.pagination.bullets;
+                    bullets.forEach((b) => b.classList.remove('swiper-pagination-bullet-active'));
+
+                    if (bullets[realIndex]) {
+                        bullets[realIndex].classList.add('swiper-pagination-bullet-active');
+                    }
+                }}
                 onSwiper={(swiper) => (swiperRef.current = swiper)}
             >
             {slides.map((slide, index) => (
@@ -71,8 +89,10 @@ export default function Slider({ slides }) {
                             alt={slide.alt}
                             title={slide.title}
                             body={slide.body}
+                            bodyLong={slide.bodyLong}
                             time={slide.time}
                             format={slide.format}
+                            button={trans.buttons.contact}
                         />
                     </div>
                 </SwiperSlide>

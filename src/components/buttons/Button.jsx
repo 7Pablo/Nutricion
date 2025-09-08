@@ -7,6 +7,7 @@ export default function Button({
   children,
   scrollTo,  
   href,      
+  onClick
 }) {
 
   const handleClick = (e) => {
@@ -14,7 +15,12 @@ export default function Button({
       e.preventDefault();
       smoothScroll(scrollTo, 1000); 
     } else if (href) {
+      e.preventDefault();
       window.open(href, "_blank"); 
+    }
+
+    if (onClick) {
+      onClick(e);
     }
   };
 

@@ -38,12 +38,24 @@
         "top": "Explora todos",
         "center": "Mis Servicios",
         "bottom": "Estoy aquí para brindarte las herramientas y el apoyo necesario para que puedas alcanzar tus objetivos con éxito. Explora los servicios que ofrezco y encuentra la solución perfecta para lo que necesitas.",
-        "card_title1": "Programa de bienestar general",
-        "card_body1": "Un enfoque holístico que incluye ejercicios y recetas personalizadas para mejorar energía.",
-        "card_title2": "Asesoría nutricional",
-        "card_body2": "Sesión personalizada para revisar hábitos y crear un plan alimenticio adaptado.",
-        "card_title3": "Plan de nutrición hormonal",
-        "card_body3": "Plan para equilibrar el ciclo menstrual o problemas hormonales a través de la dieta.",
+        "card1": {
+            "card_title": "Programa de bienestar general",
+            "card_body": "Un enfoque holístico que incluye ejercicios y recetas personalizadas para mejorar energía.",
+            "card_long1": "Sesión personalizada en la que, de manera cercana y profesional, revisaremos a fondo tus hábitos alimenticios, rutinas diarias, preferencias personales y estilo de vida. A partir de esta información, diseñaremos un plan nutricional completamente adaptado a ti, teniendo en cuenta no solo tus necesidades físicas y de salud, sino también tus metas personales, tu bienestar integral y la sostenibilidad en el tiempo.",
+            "card_long2": "El objetivo es que encuentres un equilibrio saludable que se ajuste a tu día a día, te ayude a mejorar tu relación con la comida y te permita alcanzar resultados reales y duraderos."
+        },
+        "card2": {
+            "card_title": "Asesoría nutricional",
+            "card_body": "Sesión personalizada para revisar hábitos y crear un plan alimenticio adaptado.",
+            "card_long1": "Plan nutricional especializado diseñado para ayudarte a equilibrar tu ciclo menstrual y atender posibles desequilibrios hormonales a través de la alimentación. En esta asesoría trabajaremos en la selección de alimentos que favorecen el equilibrio hormonal, la reducción de síntomas como dolor, inflamación o cambios de ánimo, y la mejora de tu bienestar general.",
+            "card_long2": "El objetivo es ofrecerte una guía práctica y personalizada que, mediante la dieta, apoye la regulación natural de tu organismo y contribuya a mejorar tu calidad de vida de forma sostenible."
+        },
+        "card3": {
+            "card_title": "Plan de nutrición hormonal",
+            "card_body": "Plan para equilibrar el ciclo menstrual o problemas hormonales a través de la dieta.",
+            "card_long1": "Un enfoque holístico que combina la nutrición con el movimiento, integrando ejercicios adaptados a tu nivel y necesidades, junto con recetas personalizadas diseñadas para potenciar tu bienestar. Cada recomendación está pensada para ayudarte a mantener una rutina equilibrada que favorezca tanto tu cuerpo como tu mente.",
+            "card_long2": "El objetivo es que, a través de hábitos saludables, logres mejorar tu energía diaria, aumentar tu vitalidad y fortalecer tu salud integral de una manera práctica y sostenible en el tiempo."
+        },
         "format": "Precencial",
         "weeks": "semanas",
         "days": "días"
@@ -72,7 +84,8 @@
         "begin": "Comencémos",
         "history": "Mira mi historia",
         "all": "Pata todos",
-        "business": "Para empresas"
+        "business": "Para empresas",
+        "contact": "Contáctame"
     },
 
     "metadata": {
